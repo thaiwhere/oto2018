@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+
+<!-- Mirrored from www.bonbanh.com/quy-che-hoat-dong/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:37:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Quy chế hoạt động của Bonbanh</title>
+<base />
+<meta name="robots" content="noindex">
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../css/register.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="../img/favico.ico"  type="image/x-icon"/>
+
+
+
+<script type="text/javascript" src="../js/jquery-1.3.2.min.js" ></script>
+<script language="javascript" src="../js/lib3.js"></script>  
+
+</head>
+<body >
+
+<div id="wrapper">
+<div id="header">
+<style>
+
+
+
+</style>
+<a id="logo"  href="../index.html" title="oto, mua ban oto"  ><h1>oto, mua ban oto</h1>
+</a>
+
+
+<div id="top-nav" style="*width:325px">
+	<ul>		
+		<li><a href="../dang-ky-thanh-vien/index.html">Đăng ký</a></li>
+		<li><a href="../thanh-vien/index.html" onclick="open_dialog('login-dlg','username1');return false;">Đăng nhập</a></li>
+		<li><a href="../gioi-thieu/index.html">Hướng dẫn</a></li>		
+		<li class="ilast"><a href="../lien-he/index.html">Liên hệ</a></li>
+</ul>		
+	<img src="../img/pixel.gif" class="img-top-nav-right"/>
+	
+</div>		
+
+
+
+<div id="nav-bar">
+	<a class="menu-item" href="../index.html" title="oto, mua ban oto">Trang chủ</a>
+	<a class="menu-item" href="../oto/index.html" title="Tìm mua ô tô">Tìm mua ô tô</a>
+	<a class="menu-item" href="../salon-oto/index.html">Salon Ôtô</a>
+	<a class="menu-item" href="../dang-tin-ban-xe/index.html" title="Bán ô tô">Bán ô tô</a>
+	<a class="menu-item" href="../tin-mua-xe/index.html" title="Các tin mua xe">Cần mua ?</a>
+		
+	<a class="menu-item" href="../my-bonbanh/index.html" title="Quản lý tin đăng của bạn...">My BonBanh</a>
+		</div>
+</div>
+<div id="cookie_alert" ></div>
+<div id="alert_content" ></div>
+	<!-- begin login diaglog-->
+		<div  id="login-dlg" style="display:none" class="dlg-box">
+		<div class="shadow">
+		<span class="close-btn"><a href="#" onclick="return close_dialog('login-dlg');">x</a></span>
+		<div id="login-frm">
+		<form  action="#" method="post">
+			<span class="input-label">Tên truy cập</span><span class="input-text"><input name="username1" id="username1" type="text" ></span>
+			<span class="input-label">Mật khẩu</span><span class="input-text"><input type="password" id="pass1" name="pass1"></span>
+			<div class="input-btn">
+			<input type="submit" name="login_btn" value="Đăng nhập" class="login_btn" onclick="return login_submit1();"/>
+			<a href="../quen-mat-khau/index.html">Quên mật khẩu ?</a>
+			</div>
+			<div style="float: left;width:260px;padding-left:20px;color:#666">Tên truy cập có thể là: tên truy cập/email/mobile tương ứng với tài khoản của bạn</div>
+			<div id="login_processing" ><img src="../img/processing.gif"></div>
+			
+		</form>
+		</div>
+		</div>
+		</div>
+	<!-- end login diaglog-->
+	
+<script>
+
+function login_submit1()
+{
+	$("#login_processing").show();
+	//$("#login_msg").hide();
+	var ct = new Date();
+	strURL='process_login/?T='+ct.getTime();
+	$.post(strURL, {username: $("#username1").val(),pass: $("#pass1").val()}, function(data){
+				if(data.length >0) {
+					
+					if(data=="OK")
+					{						
+						location.reload(true);
+
+					}else if(data=="OK1")
+					{
+						window.location="../my-bonbanh/index.html";
+					}else if(data=="NotExist")
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: Tên truy cập không có trong hệ thống!");
+					}else
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: mật khẩu không đúng hãy thử lại!");
+					}
+					
+				}else
+				{
+					$("#login_processing").hide();
+					alert("Lỗi đăng nhập: tên truy câp/mật khẩu không đúng hãy thử lại!");
+				}
+			});
+	return false;
+}
+
+</script><div class="breadcrum"><a href="../index.html">Trang chủ</a> &raquo; Quy chế hoạt động</div>
+<div class="register" style="height:auto;">
+	<div style="padding:20px;line-height:18px;">
+	<table border=0 >
+		<tr style="font-size:16px; text-align:center">
+		<td width=28%>CÔNG TY CỔ PHẦN KYPERNET VIỆT NAM</td>
+		<td width=72%>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>
+Độc lập – Tự do – Hạnh phúc
+		</td>
+		</tr>
+	</table>
+	<div style="text-align:center;line-height:32px;padding-top:20px;">
+	<h2>QUY CHẾ HOẠT ĐỘNG CỦA SÀN GIAO DỊCH</h2>
+	<h1>THƯƠNG MẠI ĐIỆN TỬ WWW.BONBANH.COM</h1>
+	</div>
+	<p>
+	Bonbanh.com là tổ hợp các dịch vụ phục vụ, hỗ trợ nhu cầu mua bán trực tuyến chuyên biệt về thị trường ô tô bao gồm : Đăng tin rao bán ô tô của cá nhân, môi giới và các salon ô tô,giới thiệu về các salon/showroom ô tô, đăng tin cần mua ô tô …
+Mục tiêu mà Bonbanh.com hướng tới là sẽ trở thành thương hiệu tin cậy trong thị trường mua bán ô tô là cầu nối thương mại giữa người bán và người mua, giữa doanh nghiệp với doanh nghiệp. 
+	</p>
+	<h3>I.　Nguyên tắc hoạt động của Sàn giao dịch thương mại điện tử www.Bonbanh.com</h3>
+	<p>
+	 Sàn giao dịch điện tử www.Bonbanh.com do Công ty cổ phần Kypernet Việt Nam làm chủ sở hữu. Thành viên trên sàn giao dịch điện tử www.Bonbanh.com là các cá nhân, môi giới, salon/showroom có nhu cầu về mua bán ô tô hoặc liên quan đễn lĩnh vực ô tô, được www.Bonbanh.com chính thức công nhận và được phép sử dụng dịch vụ do Sàn giao dịch điện tử www.Bonbanh.com và các bên liên quan cung cấp. Từ “dịch vụ” bao gồm tất cả các dịch vụ do Sàn giao dịch điện tử www.Bonbanh.com cung cấp hoặc liên quan đến Sàn giao dịch điện tử www.Bonbanh.com
+	</p>
+	<p>- Tổ chức, cá nhân tham gia giao dịch tại Sàn Giao dịch thương mại điện tử www.Bonbanh.com tự do thỏa thuận trên cơ sở tôn trọng quyền và lợi ích hợp pháp của các bên tham gia hoạt động mua bán hàng hóa, sản phẩm, dịch vụ thông qua hợp đồng, không trái với qui định của pháp luật.
+	</p>
+	<p>- Thông tin đăng tải trên Sàn giao dịch thương mại điện tử www.Bonbanh.com phải đáp ứng đầy đủ các quy định của pháp luật có liên quan, không thuộc các trường hợp cấm kinh doanh, cấm quảng cáo theo quy định của pháp luật
+.
+	</p>
+	<h3>II.　Quy định chung</h3>
+	<p>
+	Trong Quy chế này, trừ khi chủ thể hoặc ngữ cảnh có yêu cầu khác, các từ và các thuật ngữ sau đây sẽ có ý nghĩa sau đây:
+	<p>
+	<p>
+	- Sàn giao dịch thương mại điện tử Bonbanh.com là trang web www.bonbanh.com trực thuộc công ty cổ phần Kypernet Việt Nam . Đây là webstie sàn giao dịch thương mại điện tử, nơi các tổ chức, cá nhân có thể đăng thông tin bán Ô tô, tìm hiểu thông tin thị trường, đăng các thông tin liên hệ nhằm phục vụ mục đích cung cấp thông tin Xe ô tô, người bán, người mua, nơi bán, nơi mua, giá cả do Khách hàng đề ra.
+	</p>
+	<p>- Khách hàng: là tố chức/ cá nhân sử dụng trang Website Bonbanh.com, bao gồm cả Người dùng và Thành viên có nhu cầu sử dụng website và các dịch vụ được cung cấp bởi website Bonbanh.com một cách tự nguyện</p>
+	<p>- Sản phẩm: là những sản phẩm được giao dịch trên trang Website Bonbanh.com.</p>
+	<p>- Thông tin: là những thông tin được công khai trên trang Website Bonbanh.com. Bao gồm thông tin về Sản phẩm, Thông tin cá nhân đăng ký, thông tin về thị trường, sản phẩm được giới thiệu trên các nguồn chính thống khác.</p>
+	<p>- Sở hữu Trí tuệ: bất kỳ bằng sáng chế, bản quyền, thiết kế được đăng ký hoặc chưa đăng ký, quyền đối với thiết kế, nhãn hiệu được đăng ký hoặc chưa đăng ký, nhãn hiệu dịch vụ hoặc quyền sở hữu công nghiệp hoặc sở hữu trí tuệ khác và bao gồm các ứng dụng cho bất kỳ mục nào trong những mục trên.</p>
+	
+	<p></p>
+	
+	<h3>III.　Quy trình giao dịch</h3>
+	<h4>1. Nguyên tắc hoạt động</h4>
+	<p>Cung cấp các dịch vụ trực tuyến cho những cá nhân và doanh nghiệp có nhu cầu giới thiệu và bán sản phẩm của mình tới những người mua tiềm năng.</p>
+	<p>• Sản phẩm hàng hóa, dịch vụ tham gia giao dịch trên Sàn giao dịch TMĐT Bonbanh.com phải được phép kinh doanh, lưu hành và không thuộc các trường hợp cấm kinh doanh, cấm quảng cáo theo quy định của pháp luật.</p>
+	<p>• Mọi hoạt động mua bán hàng hóa, cung cấp dịch vụ trên Sàn giao dịch TMĐT Bonbanh.com phải được thực hiện công khai, minh bạch, đảm bảo quyền lợi của người tiêu dùng.</p>
+	<p>• Thành viên tham gia giao dịch trên Sàn giao dịch TMĐT Bonbanh.com là cá nhân và/hoặc doanh nghiệp có nhu cầu mua hoặc bán sản phẩm trên Sàn giao dịch TMĐT Bonbanh.com. Thành viên phải đăng ký kê khai ban đầu các thông tin liên quan, được Sàn giao dịch TMĐT Bonbanh.com chính thức công nhận. Thành viên sử dụng trang web này phải đồng ý rằng:</p>
+	<p>• Là một cá nhân và/hoặc doanh nghiệp.</p>
+	<p>• Có đầy đủ năng lực hành vi dân sự.</p>
+	<p>• Việc Thành viên truy cập trang web này tại mọi thời điểm, địa điểm Thành viên phải thực hiện đầy đủ các điều khoản trong Quy chế này.</p>
+	<p>• Thành viên phải bảo vệ mật khẩu của Thành viên và giám sát các thông tin có liên quan đến tài khoản của Thành viên; Thành viên hiểu và đồng ý rằng Thành viên sẽ chịu trách nhiệm cả về việc tài khoản của Thành viên được sử dụng bởi bất cứ ai mà Thành viên cho phép truy cập vào nó.</p>
+	<p>• Các thông tin mà Thành viên cung cấp cho Sàn giao dịch TMĐT Bonbanh.com là thông tin chính xác, đầy đủ và đúng sự thật.</p>
+	<p>• Các nội dung trong bản Quy chế này phải tuân thủ theo hệ thống pháp luật hiện hành của Việt Nam. Thành viên khi tham gia vào Sàn giao dịch TMĐT Bonbanh.com phải tự tìm hiểu trách nhiệm pháp lý của mình đối với luật pháp hiện hành của Việt Nam và cam kết thực hiện đúng những nội dung trong Quy chế của Sàn giao dịch TMĐT Bonbanh.com.</p>
+	
+	<h4>2. Quy trình giao dịch</h4>	
+	<p>-  <i>Quy trình giao dịch dành cho người mua:</i> Người mua xe có thể đăng ký làm thành viên của Sàn giao dịch TMĐT Bonbanh.com hoặc không. Bằng cách truy cập vào địa chỉ website: bonbanh.com người dùng có thể tìm danh sách các xe mà mình quan tâm . Nếu người dùng có nhu cầu mua sẽ liên hệ trực tiếp với người đăng tin để xem xe và thỏa thuận việc giao dịch giữa 2 bên cụ thể. Bonbanh.com sẽ không tham gia và không chịu trách nhiệm liên quan vào quá trình giao dịch giữa người mua và người bán.</p>
+	<p>- <i>Quy trình dành cho người bán hàng/đăng tin:</i> Người đăng tin bán xe trên Bonbanh.com bắt buộc phải đăng ký làm thành viên của Bonbanh.com và phải đăng nhập vào hệ thống website Bonbanh.com. Cách thức đăng ký thành viên và đăng nhập theo hướng dẫn tại : <a style="color:#888" href="../gioi-thieu/index.html#link2">http://www.bonbanh.com/gioi-thieu/#link2</a>
+Hướng dẫn đăng tin : <a style="color:#888"  href="../gioi-thieu/index.html#link3">http://www.bonbanh.com/gioi-thieu/#link3</a></p>
+	<p>-  <i>Quy trình giao nhận vận chuyển :</i> là thỏa thuận trực tiếp giữa người mua và người bán, Bonbanh.com không tham gia vào quá trình này.</p>
+	<p>- <i>Quy trình xác nhận/hủy đơn hàng :</i> Website Bonbanh.com không có chức năng lập đơn hàng mua xe . Người mua chỉ tìm thông tin xe trên trang Bonbanh.com rồi liên hệ trực tiếp với người bán .</p>
+	<p>- <i>Quy trình bảo hành/bảo trì sản phẩm :</i> Không có </p>
+	<p>- <i>Quy trình giải quyết tranh chấp, khiếu nại:</i> </p>
+	<div style="margin:20px ">
+	　+  Nếu phát sinh tranh chấp giữa Thành viên và Sàn giao dịch TMĐT Bonbanh.com, Sàn giao dịch TMĐT Bonbanh.com cố gắng cung cấp một phương thức trung lập và tiết kiệm để giải quyết tranh chấp nhanh chóng. Theo đó, Thành viên và Sàn giao dịch TMĐT Bonbanh.com đồng ý rằng Sàn giao dịch TMĐT Bonbanh.com sẽ giải quyết theo pháp luật bất kỳ khiếu nại hoặc tranh cãi ngoài Thỏa thuận này hoặc các dịch vụ của Sàn giao dịch TMĐT Bonbanh.com phù hợp với một trong những phần phụ lục bên dưới hoặc như Sàn giao dịch TMĐT Bonbanh.com và Thành viên đồng ý bằng văn bản. Trước khi sử dụng đến các biện pháp thay thế, Sàn giao dịch TMĐT Bonbanh.com khuyến khích Thành viên trước tiên hãy liên hệ với Sàn giao dịch TMĐT Bonbanh.com để tìm được giải pháp phù hợp. Sàn giao dịch TMĐT Bonbanh.com sẽ xem xét yêu cầu hợp lý để giải quyết tranh chấp thông qua các thủ tục giải quyết tranh chấp thay thế, chẳng hạn như trọng tài, thay thế cho kiện tụng.<br>
+　	+ Bất kỳ khiếu nại nào phát sinh trong quá trình sử dụng dịch vụ trên Sàn giao dịch TMĐT Bonbanh.com phải được gởi đến Phòng Hỗ Trợ khách hàng của Bonbanh.com tại:<br>
+　Điện thoại : (04) 2215 2215<br> 
+　　Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script><br>
+　　ngay sau khi xày ra sự kiện phát sinh khiếu nại. Bonbanh.com sẽ căn cứ từng trường hợp cụ thể để có phương án giải quyết cho phù hợp. <br>
+	+ Mọi tranh chấp giữa người sử dụng với nhau hoặc giữa người sử dụng với Sàn giao dịch TMĐT Bonbanh.com sẽ được giải quyết trên cơ sở thương lượng. Trường hợp không đạt được thỏa thuận như mong muốn, một trong hai bên có quyền đưa vụ việc ra Tòa án nhân dân có thẩm quyền để giải quyết.<br>
+	+ Bonbanh.com không chịu trách nhiệm và liên quan đến giao dịch giữa người mua và người mua và người bán
+	</div>
+	<p></p>
+	<h3>IV.　Quy trình thanh toán</h3>
+	<p>- <i>Đối với người mua xe :</i> Người mua tự liên hệ với thành viên đăng tin bán xe để tiến hành giao dịch và thanh toán.</p>
+	<p>- <i>Đối với người đăng tin bán xe:</i> Là thành viên của Bonbanh.com sẽ được đăng 1 tin bán xe miễn phí đầu tiên, bắt đầu từ tin thứ 2 trở đi người dùng sẽ phải trả phí cho tin đăng. Các hình thức trả phí như sau:</p>
+	<div style="padding-left:20px;">
+		　　- Cách 1: Mua tin đăng qua SMS (15.000đ/SMS)<br>
+　　			  + Bước 1: Đăng kí thành viên<br>
+　　            + Bước 2: Đăng nhập vào tài khoản<br>
+　　            + Bước 3: Lấy mã số tài khoản<br>
+　　            + Bước 4: Gửi tin nhắn theo cú pháp: BONBANH TX <Mã TK> gửi đến 8785.<br>
+　　- Cách 2: Đăng ký thành viên VIP trên Bonbanh.com trả phí hàng tháng. Với hình thức thanh toán qua chuyển khoản hoặc thu phí trực tiếp.<br>
+　　Ngoài ra người đăng tin bán xe có thể sử dụng thêm 1 số tiện ích của dịch vụ SMS Bonbanh.com cung cấp thông qua việc nhắn tin SMS ( có mất phí ). Xem chi tiết tại: http://www.bonbanh.com/sms/ <br>
+	</div>
+	<br>
+	
+	
+	<h3>V.　Đảm bảo an toàn giao dịch</h3>
+	Sàn giao dịch TMĐT Bonbanh.com xây dựng cơ chế bảo đảm an toàn giao dịch như sau:
+	<p>+ Quản lý thông tin của Người Bán Hàng: Khi đăng ký tham gia bán hàng trên Sàn giao dịch TMĐT Bonbanh.com, Người Bán Hàng phải cung cấp đầy đủ các thông tin liên quan và phải hoàn toàn chịu trách nhiệm đối với các thông tin này. Các thông tin cụ thể bao gồm: thông tin về nhân thân đối với cá nhân, thông tin về tư cách pháp lý đối với thành viên là tổ chức, pháp nhân. Các thông tin này sẽ được Sàn giao dịch TMĐT Bonbanh.com đưa vào dữ liệu quản lý.</p>
+	<p>+ Kiểm soát giao dịch của Người Bán Hàng: Các giao dịch của Người Bán Hàng với Khách hàng là trực tiếp và không qua Sàn giao dịch TMĐT Bonbanh.com vì vậy Bonbanh.com khuyến cáo Khách hàng cần tìm hiểu và xác thực thông tin của người bán trước khi thực hiện giao dịch </p>
+	<p>+ Cơ chế gửi khiếu nại về Người Bán Hàng dành cho các Khách hàng: Khách hàng có quyền gửi khiếu nại về Người Bán Hàng đến Sàn giao dịch TMĐT Bonbanh.com. Khi tiếp nhận những phản hồi này, Sàn giao dịch TMĐT Bonbanh.com sẽ xác nhận lại thông tin, trường hợp đúng như phản ánh của người mua tùy theo mức độ, Sàn giao dịch TMĐT Bonbanh.com sẽ có những biện pháp xử lý kịp thời nhằm bảo vệ quyền lợi của Khách hàng.</p>
+	
+	
+	<h3>VI.　Bảo vệ thông tin cá nhân khách hàng</h3>
+	<p>- Chính sách bảo mật này công bố cách thức mà Sàn TMĐT Bonbanh.com thu thập, lưu trữ và xử lý thông tin hoặc dữ liệu cá nhân (“Thông tin cá nhân”) của các Khách hàng của mình thông qua wesite của Sàn TMĐT Bonbanh.com</p>
+	<p>- Sàn TMĐT Bonbanh.com cam kết sẽ bảo mật các Thông tin cá nhân của Khách hàng, sẽ nỗ lực hết sức và sử dụng các biện pháp thích hợp để các thông tin mà Khách hàng cung cấp cho Bonbanh.com trong quá trình sử dụng website này được bảo mật và bảo vệ khỏi sự truy cập trái phép.Tuy nhiên, Sàn TMĐT Bonbanh.com không đảm bảo ngăn chặn được tất cả các truy cập trái phép. Trong trường hợp truy cập trái phép nằm ngoài khả năng kiểm soát của Bonbanh.com, Sàn TMĐT Bonbanh.com sẽ không chịu trách nhiệm dưới bất kỳ hình thức nào đối với bất kỳ khiếu nại, tranh chấp hoặc thiệt hại nào phát sinh từ hoặc liên quan đến truy cập trái phép đó.</p>
+	<p>- Khách hàng được khuyến nghị để nắm rõ những quyền lợi của mình khi sử dụng các dịch vụ của Sàn TMĐT Bonbanh.com được cung cấp trên website này.</p>
+	<p>- Sàn TMĐT Bonbanh.com đưa ra các cam kết dưới đây phù hợp với các quy định của pháp luật Việt Nam, trong đó bao gồm các cách thức mà Bonbanh.com sử dụng để bảo mật thông tin của Khách hàng.</p>
+	<p>• Mục đích thu thập Thông tin cá nhân<br>
+Sàn TMĐT Bonbanh.com thu thập Thông tin cá nhân của Khách hàng cho một hoặc một số mục đích như sau:</p>
+
+	<p>- Thực hiện và quản lý việc đặt hàng cho Khách hàng</p>
+	<p>- Thực hiện và quản lý việc sử dụng dịch vụ vận chuyển hàng hóa;</p>
+	<p>- Thực hiện và quản lý hoạt động tiếp thị, cung cấp thông tin khuyến mại tới Khách hàng như gửi các cập nhật mới nhất về thông tin khuyến mại và chào giá mới liên quan đến sản phẩm và dịch vụ của Sàn TMĐT Bonbanh.com ;</p>
+	<p>- Cung cấp giải pháp nâng hạng và thay đổi dịch vụ nhằm phục vụ nhu cầu Khách hàng;</p>
+	<p>- Quản lý, phân tích, đánh giá số liệu liên quan đến dữ liệu của Khách hàng để xây dựng chính sách bán và chính sách phục vụ Khách hàng phù hợp;</p>
+	<p>- Tiếp nhận thông tin, góp ý, đề xuất, khiếu nại của Khách hàng nhằm cải thiện chất lượng dịch vụ của Sàn TMĐT Bonbanh.com;</p>
+	<p>- Liên hệ với Khách hàng để giải quyết các yêu cầu của Khách hàng;</p>
+	<p>- Đảm bảo an ninh, an toàn đối với các giao dịch thanh toán trực tuyến.</p>
+	<p>• Loại thông tin thu thập</p>
+	<p>Những loại Thông tin cá nhân mà Sàn TMĐT Bonbanh.com thu thập từ Khách hàng của mình bao gồm:
+	</p>
+	<p>- Thông tin cá nhân như họ và tên, tên truy cập,</p>
+	<p>- Thông tin liên lạc như số điện thoại, địa chỉ gửi thư, địa chỉ email, số fax;</p>
+	<p>- Thông tin về doanh nghiệp của Khách hàng như tên doanh nghiệp, địa chỉ doanh nghiệp, chức danh;</p>
+	<p>Các Thông tin cá nhân trên được yêu cầu đối với những dịch vụ cụ thể, Khách hàng có quyền từ chối hoặc không cung cấp đầy đủ các thông tin được yêu cầu. Trong trường hợp đó, Sàn TMĐT Bonbanh.com không thể cung cấp cho Khách hàng những dịch vụ đầy đủ và chất lượng.
+Sàn TMĐT Bonbanh.com cần sự hỗ trợ từ phía Khách hàng trong việc đảm bảo tính chính xác và đầy đủ của các thông tin thu thập. Vì vậy, xin vui lòng thông báo cho Bonbanh.com về bất kỳ sự thay đổi nào trong Thông tin cá nhân Khách hàng bằng việc liên hệ với Bonbanh.com qua các hình thức được công bố trên website.</p>
+	<p>• Thời gian lưu trữ thông tin thu thập</p>
+	<p>-Sàn TMĐT Bonbanh.com sẽ lưu trữ các Thông tin cá nhân do Khách hàng cung cấp trên các hệ thống nội bộ của Bonbanh.com trong quá trình cung cấp dịch vụ cho Khách hàng hoặc cho đến khi hoàn thành mục đích thu thập hoặc khi Khách hàng có yêu cầu hủy các thông tin đã cung cấp. Nhưng Bonbanh.com sẽ lưu lại số điện thoại đã đăng ký để phục vụ cho điều khoản mỗi số điện thoại chỉ đăng ký duy nhất 1 tài khoản trên Bonbanh.com và chỉ được đăng 1 tin miễn phí duy nhất. </p>
+	<p>• Việc công bố thông tin thu thập</p>
+	<p>- Sàn TMĐT Bonbanh.com có thể tiết lộ Thông tin cá nhân từ Khách hàng cho bên thứ ba để đáp ứng yêu cầu pháp lý, thực thi các chính sách của Bonbanh.com, khi có thông báo rằng một danh sách hoặc nội dung vi phạm các quyền lợi, hoặc để bảo vệ quyền lợi, tài sản hoặc sự an toàn. Những thông tin này sẽ được công bố theo quy định của pháp luật và các quy định hiện hành. Bonbanh.com cũng có thể chia sẻ thông tin cá nhân của bạn cho:</p>
+	<p>+ Bên thứ ba để cung cấp nội dung và dịch vụ chung (như đăng ký, giao dịch và hỗ trợ khach hàng), giúp phát hiện và ngăn chặn hành vi bất hợp pháp và vi phạm chính sách của Bonbanh.com, và để hướng dẫn các quyết định về sản phẩm, dịch vụ và thông tin liên lạc của bên thứ ba. Các bên thứ ba sẽ sử dụng thông tin này để gửi cho bạn thông tin liên lạc tiếp thị chỉ khi bạn yêu cầu dịch vụ của họ.</p>
+	<p>+ Cung cấp dịch vụ theo hợp đồng hỗ trợ hoạt động kinh doanh của Bonbanh.com (như điều tra gian lận, thu thập hóa đơn, liên kết, các chương trình khen thưởng và hỗ trợ khách hàng). 
++ Bên thứ ba khác mà bạn yêu cầu Bonbanh.com gửi thông tin của bạn (hoặc bên mà bạn đồng ý khi sử dụng một dịch vụ cụ thể khác). </p>
+	<p>+ Các cơ quan thực thi pháp luật, các cơ quan khác của chính phủ hoặc các bên thứ ba để đáp ứng yêu cầu thông tin liên quan đến điều tra hình sự, hoạt động bất hợp pháp bị cáo buộc hoặc bất kỳ hoạt động nào khác có thể làm cho Bonbanh.com, bạn hay bất kỳ người dùng Bonbanh.com phải chịu trách nhiệm pháp lý. Các thông tin cá nhân Bonbanh.com tiết lộ có thể bao gồm ID người dùng của bạn và lịch sử ID người dùng, tên, thành phố, quận, số điện thoại, địa chỉ email, khiếu nại gian lận và đấu thầu và danh sách lược sử hoặc bất cứ điều gì khác mà Bonbanh.com cho là có liên quan.</p>
+	<p>+ Các cơ quan khác có liên quan đến điều tra gian lận, vi phạm sở hữu trí tuệ, vi phạm bản quyền, hoặc các hoạt động bất hợp pháp khác, tùy theo quyết định của Bonbanh.com tin rằng cần thiết hoặc thích hợp, hoặc theo thỏa thuận bảo mật hoặc theo yêu cầu của pháp luật. Khi đó, Bonbanh.com có thể tiết lộ tên, địa chỉ, thành phố, quận, quốc gia, số điện thoại, địa chỉ email và tên công ty.</p>
+	<p>+ Các đơn vị kinh doanh khác mà Bonbanh.com kế hoạch sát nhập với hoặc được mua lại bởi một cá thể kinh doanh. (Nếu một sự sát nhập như vậy xảy ra, Bonbanh.com sẽ yêu cầu đơn vị sát nhập thực thi Chính sách Bảo mật này đối với thông tin cá nhân của bạn). Nếu thông tin cá nhân của bạn sẽ được sử dụng trái với Chính sách này, bạn sẽ nhận được thông báo trước.
+Các Bên Thứ Ba và Các Liên Kết Sàn TMĐT Bonbanh.com có thể chuyển thông tin của quý khách cho các công ty khác trong nhóm. Bonbanh.com có thể chuyển thông tin của quý khách cho các đại lý và nhà thầu phụ trong khuôn khổ quy định của Chính sách Bảo mật. Ví dụ: Bonbanh.com sẽ nhờ bên thứ ba giao hàng, nhận tiền thanh toán, phân tích dữ liệu, tiếp thị và dịch vụ hỗ trợ khách hàng. Bonbanh.com có thể trao đổi thông tin với bên thứ ba với mục đích chống gian lận và giảm rủi ro tín dụng. Bonbanh.com có thể chuyển cơ sở dữ liệu gồm thông tin cá nhân của bạn nếu Bonbanh.com bán cả công ty hoặc chỉ một phần. Trong khuôn khổ Chính sách bảo mật, Bonbanh.com không bán hay tiết lộ dữ liệu cá nhân của bạn cho bên thứ ba mà KHÔNG được đồng ý trước trừ khi điều này là cần thiết cho các điều khoản trong Chính sách bảo mật hoặc Bonbanh.com được yêu cầu phải làm như vậy theo quy định của Pháp luật. Website có thể bao gồm quảng cáo của bên thứ ba và các liên kết đến các trang web khác hoặc khung của các trang web khác. Xin lưu ý rằng Bonbanh.com không có nhiệm vụ bảo mật thông tin hay nội dung của bên thứ ba hay các website khác, hay bất kỳ bên thứ ba nào mà Bonbanh.com chuyển giao dữ liệu cho phù hợp với Chính sách bảo mật.</p>
+	<p>• Quyền của Khách hàng đối với các Thông tin cá nhân được thu thập</p>
+	<p>Bất kỳ Khách hàng nào tự nguyện cung cấp Thông tin cá nhân cho Sàn TMĐT Bonbanh.com đều có các quyền như sau:
+	<br>
+	- Yêu cầu xem lại các thông tin được thu thập;<br>
+	- Yêu cầu sao chép lại các thông tin được thu thập;<br>
+- Yêu cầu chỉnh sửa, bổ sung thông tin được thu thập (đối với Khách hàng nhận thông tin qua e-newsletter và hội viên Chương trình Khách hàng thân thiết, Khách hàng có thể truy cập và tự chỉnh sửa thông tin của mình bằng cách truy cập vào tài khoản của mình trên website của Sàn TMĐT Bonbanh.com); <br>
+- Yêu cầu dừng việc thu thập thông tin;<br>
+- Khách hàng có thể thực hiện các quyền trên bằng cách tự truy cập vào website hoặc liên hệ với Bonbanh.com qua email hoặc địa chỉ liên lạc được công bố trên website của Sàn TMĐT Bonbanh.com.<br>
+- Trường hợp Khách hàng cung cấp cho Sàn TMĐT Bonbanh.com các Thông tin cá nhân không chính xác hoặc không đầy đủ để xác nhận được nhân thân Khách hàng, Bonbanh.com không thể bảo vệ được quyền bảo mật của Khách hàng theo quy định trên.
+	</p>
+	<p>• Việc sử dụng Cookies trên website của Sàn TMĐT Bonbanh.com:<br>
+	-Cookies chỉ được Sàn TMĐT Bonbanh.com sử dụng để lưu lại trạng thái về cách sản phẩm Khách hàng đã xem qua trong lần truy cập cuối cùng của Khách hàng tại máy tính truy cập nhằm mục đích trả lại trạng thái này cho Khách hàng khi truy cập lần sau.<br>
+	- Việc chấp nhận cookie không phải là một yêu cầu khi truy cập Trang web. Tuy nhiên Bonbanh.com muốn chỉ ra rằng việc sử dụng các tính năng trên trang web và đặt hàng chỉ được thực hiện khi có sự kích hoạt của các tập tin cookie. Cookies là các tập tin văn bản nhỏ dùng xác định máy tính của bạn đến máy chủ của Bonbanh.com như là một người dùng duy nhất khi bạn truy cập các trang nhất định trên Trang web và chúng được lưu trữ bởi trình duyệt Internet của bạn trên ổ cứng máy tính của bạn. Cookies có thể được sử dụng để nhận diện địa chỉ Giao thức Internet của bạn, tiết kiệm thời gian trong khi bạn đang truy cập, hoặc muốn vào, Trang web. Bonbanh.com chỉ sử dụng cookies thuận tiện cho bạn trong việc sử dụng Trang web (ví dụ như để nhớ bạn là ai khi bạn muốn sửa đổi giỏ hàng của bạn mà không cần phải nhập lại địa chỉ email của bạn) và không thu thập hoặc sử dụng bất kỳ thông tin khác về bạn (cho Ví dụ mục tiêu quảng cáo). Trình duyệt của bạn có thể được thiết lập để không chấp nhận cookies, nhưng điều này sẽ hạn chế sử dụng Trang web. Hãy chấp nhận sự đảm bảo rằng việc Bonbanh.com sử dụng cookies không chứa bất kỳ thông tin cá nhân hoặc bí mật và không có virus. Nếu bạn muốn tìm hiểu thêm thông tin về tập tin cookies, hãy truy cập //www.allaboutcookies.org hoặc để tìm hiểu về loại bỏ cookies khỏi trình duyệt của bạn, truy cập //www.allaboutcookies.org/manage-cookies/index html.<br>
+	- Bonbanh.com sử dụng Google Analytics, một dịch vụ phân tích web cung cấp bởi Google, Inc ("Google"). Google Analytics sử dụng cookies, các file văn bản được đặt trên máy tính của bạn, để giúp các trang web phân tích cách người dùng sử dụng trang web. Các thông tin được tạo ra bởi các tập tin cookies về việc sử dụng của bạn của trang web (bao gồm địa chỉ IP của bạn) sẽ được chuyển đến và lưu trữ bởi Google trên các máy chủ tại Hoa Kỳ. Google sẽ sử dụng thông tin này cho mục đích đánh giá việc sử dụng trang web, soạn thảo các báo cáo về hoạt động trang web cho các nhà khai thác trang web và các dịch vụ khác liên quan đến hoạt động của trang web và sử dụng Internet. Google cũng có thể chuyển thông tin này cho bên thứ ba khi được yêu cầu bởi pháp luật, hoặc cho bên thứ ba để xử lý thông tin này đại diện Google. Google sẽ không kết hợp địa chỉ IP của bạn với bất kỳ dữ liệu khác được lưu giữ bởi Google. Bạn có thể từ chối việc sử dụng cookies bằng cách chọn các thiết lập thích hợp trên trình duyệt của bạn, tuy nhiên xin lưu ý rằng nếu bạn làm điều này bạn có thể không thể sử dụng đầy đủ chức năng của Trang web này. Bằng cách sử dụng trang web này, bạn đồng ý với việc Google xử lý dữ liệu về bạn theo cách thức và cho các mục đích nêu trên.	
+	</p>
+	
+	<p>• Việc cập nhật của Chính sách bảo mật:<br>
+	- Sàn TMĐT Bonbanh.com sẽ chỉnh sửa Chính sách bảo mật này vào bất kỳ thời điểm nào khi cần thiết, bản Chính sách bảo mật cập nhật sẽ được công bố trên website của Bonbanh.com và sẽ được ghi ngày để Khách hàng nhận biết được bản mới nhất.
+	</p>
+	
+	<h3>VII.　Quản lý thông tin xấu</h3>
+	<br>
+	<h4>Quy chế đăng tin</h4>
+	- Là thành viên của Bonbanh bạn có thể đăng tin bán xe / tin mua xe trên website bonbanh.com<br>
+	-  Để đăng tin trên bonbanh.com bạn cần phải là thành viên và phải đăng nhập vào Bonbanh<br>
+	- Thành viên cá nhân ( bao gồm thành viên thường, VIP1, VIP2 ) không được để thông tin liên hệ là tên công ty/salon/showroom ô tô khi đăng tin<br>
+	- Người đăng tin phải hoàn toàn chịu trách nhiệm về nội dung và thông tin đăng của mình trên bonbanh.com<br>
+	- Các tin đăng nếu vi phạm một trong những tiêu chí sau thì sẽ bị Bonbanh xóa mà không cần báo trước :<br>
+	<div style="padding-left:20px;">
+	+ Spam tin : Cùng một xe bán (hoặc tin mua xe) nhưng được đăng lặp đi lặp lại nhiều lần (từ 2 lần trở lên) trong cùng một tài khoản hay nhiều tài khoản khác nhau.<br>
+    + Tin đăng không đúng nội dung : VD: bán xe Daewoo Matiz nhưng lại chọn đăng tin bán xe tại hãng Toyota…<br>
+    + Thông tin không không hợp lý (VD: giá bán bất hợp lý..)<br>
+    + Thông tin liên lạc ( trong phần đăng ký tài khoản ) không đúng ( người dùng không thể liên lạc được, hoặc bản thân người có trong thông tin liên lạc không đăng tin )<br>
+    + Tin đăng để số điện thoại/email không đúng quy định ( nhập số điện thoại/email vào phần mô tả bán xe)<br>
+    + Tin đăng kiểu quảng cáo không cụ thể cho cho 1 chiếc xe nào hoặc đăng bán nhiều xe trong cùng một tin<br>
+    + Đăng ảnh xe không đúng ( ảnh tượng trưng hoặc lấy từ 1 website nào khác ), ảnh không liên quan đến xe, trên ảnh có chứa thông tin liên hệ ( điện thoại, email, website ), ảnh có chất lượng quá thấp...
+	</div>
+	<h4>Nghiêm cấm :</h4>
+	　　+ Không được đăng tải thông tin rao vặt mà pháp luật Việt Nam nghiêm cấm .<br>
+	　　+ Không đăng tải thông tin rao vặt trái với đạo đức xã hội Việt Nam.<br>
+	+ Không đăng tải sex, crack, hack, chính trị, tôn giáo.
+	<h4>Quyền hạn của của Bonbanh.com:</h4>
+	-    Bonbanh.com sẽ toàn quyền loại bỏ các tin đăng rao vặt của khách hàng nếu như tin đăng vi phạm quy chế đăng tin<br>
+-    Các tin đăng không phù hợp với chuyên mục quy định sẽ bị xóa hoặc Bonbanh.com chuyển sang chuyên mục khác cho là hợp lý.<br>
+-    Bonbanh.com giữ quyền quyết định về việc lưu giữ hay loại bỏ tin đã đăng trên trang web này mà không cần báo trước.<br>
+-    Bonbanh.com không giải quyết các tranh chấp giữa khách hàng, cũng như không giải quyết bất cứ khiếu nại nào của khách hàng về tin đăng.<br>
+-    Bonbanh.com có toàn quyền thay đổi một hay nhiều điều khoản có trong quy định về đăng tin mà không cần giải thích lý do và cũng không cần phải thông báo trước.<br>
+<br>
+
+	<h3>VIII.　Giới hạn trách nhiệm trong các trường hợp phát sinh lỗi kỹ thuật của sàn giao dịch</h3>
+	
+	<p>•  Sàn giao dịch thương mại điện tử Bonbanh.com cam kết nỗ lực đảm bảo sự an toàn và ổn định của toàn bộ hệ thống kỹ thuật. Tuy nhiên, trong trường hợp xảy ra sự cố do lỗi của Bonbanh.com , Bonbanh.com sẽ ngay lập tức áp dụng các biện pháp để đảm bảo quyền lợi cho người mua hàng.</p>
+	
+	<p>•  Khi thực hiện các giao dịch trên Sàn, bắt buộc các thành viên phải thực hiện đúng theo các quy trình hướng dẫn.</p>
+	<p>•  Ban quản lý Sàn giao dịch TMĐT Bonbanh.com cam kết cung cấp chất lượng dịch vụ tốt nhất cho các thành viên tham gia giao dịch. Trường hợp phát sinh lỗi kỹ thuật, lỗi phần mềm hoặc các lỗi khách quan khác dẫn đến Thành viên không thể tham gia giao dịch được thì các Thành viên thông báo cho Ban quản lý Sàn giao dịch TMĐT: Hotline: 094 2727 225</p>
+	<p>•  Ban quản lý Sàn giao dịch TMĐT Bonbanh.com sẽ không chịu trách nhiệm giải quyết trong trường hợp thông báo của các Thành viên không đến được Ban quản lý, phát sinh từ lỗi kỹ thuật, lỗi đường truyền, phần mềm hoặc các lỗi khác không do Ban quản lý gây ra.</p>
+	
+	<h3>IX.   Quyền và nghĩa vụ của sàn giao dịch thương mại điện tử Bonbanh.com</h3>
+	<br>
+	<h4>1.  Quyền của Ban Quản trị Sàn Giao dịch TMĐT Bonbanh.com:</h4>
+	
+	<p>•  Có quyền từ chối, tạm ngừng hay chấm dứt tin đăng của Thành viên trong trường hợp thành viên cung cấp thông tin không chính xác, không đầy đủ, vi phạm pháp luật, đạo đức, thuần phong mỹ tục Việt Nam;</p>
+	<p>•  Có quyền từ chối cung cấp một hoặc tất cả dịch vụ nếu Thành viên có những hoạt động lừa đảo, giả mạo, gây rối loạn thị trường, gây mất đoàn kết đối với các Thành viên khác của Sàn Giao dịch TMĐT Bonbanh.com.</p>
+	<p>•  Sàn Giao dịch TMĐT Bonbanh.com giữ bản quyền sử dụng dịch vụ và các nội dung trên Sàn Giao dịch TMĐT Bonbanh.com theo luật bản quyền quốc tế và các quy dịnh pháp luật về bảo hộ sở hữu trí tuệ tại Việt Nam. và tất cả các biểu tượng, logo, nội dung theo các ngôn ngữ khác nhau đều thuộc quyền sở hữu của Giao dịch TMĐT Bonbanh.com. Nghiêm cấm mọi hành vi sao chép, sử dụng và phổ biến bất hợp pháp các quyền sở hữu trên.</p>
+	<h4>2.  Nghĩa vụ của Ban Quản trị Sàn Giao dịch TMĐT Bonbanh.com</h4>
+	
+	<p>•  Chịu trách nhiệm xây dựng và duy trì hoạt động bình thường của Sàn Giao dịch TMĐT Bonbanh.com. Ban Quản trị chịu trách cung cấp chất lượng dịch vụ tốt cho các thành viên tham gia giao dịch và nhanh chóng khắc phục lỗi kỹ thuật, các lỗi khách quan khác trong thời gian sớm nhất.  Sàn Giao dịch TMĐT Bonbanh.com không chịu trách nhiệm liên đới đối với các hậu quả xảy ra các sự kiện bất khả kháng như: Thiên tai, hỏa hoạn, biến động xã hội, các quyết định của cơ quan chức năng...</p>
+	<p>•  Xây dựng Cơ chế Hoạt động, Hợp đồng, Quy định, Hướng dẫn các quy trình đăng tin…cho các Thành viên gia giao dịch trên Sàn Giao dịch TMĐT Bonbanh.com</p>
+	<p>•  Lưu giữ và cập nhật thông tin đăng ký, đăng tin của các Thành viên trên Bonbanh.com</p>
+	<p>•  Tích cực hỗ trợ cơ quan quản lý nhà nước điều tra các hành vi kinh doanh vi phạm pháp luật; cung cấp các tài liệu như thông tin đăng ký, lịch sử dữ liệu giao dịch … của đối tượng có hành vi vi phạm pháp luật trên Sàn Giao dịch TMĐT Bonbanh.com.</p>
+	<h4>3. Bảo vệ thông tin cá nhân của khách hàng trên Bonbanh.com</h4>
+	
+	<p>•  Bonbanh.com cam kết sẽ bảo mật các Thông tin cá nhân của Khách hàng, sẽ nỗ lực hết sức và sử dụng các biện pháp thích hợp để các thông tin mà Khách hàng cung cấp cho Bonbanh.com trong quá trình sử dụng website này được bảo mật và bảo vệ khỏi sự truy cập trái phép.Tuy nhiên, Bonbanh.com không đảm bảo ngăn chặn được tất cả các truy cập trái phép. Trong trường hợp truy cập trái phép nằm ngoài khả năng kiểm soát của Bonbanh.com, Bonbanh.com sẽ không chịu trách nhiệm dưới bất kỳ hình thức nào đối với bất kỳ khiếu nại, tranh chấp hoặc thiệt hại nào phát sinh từ hoặc liên quan đến truy cập trái phép đó.</p>
+	
+	<h4>4. Cơ chế hỗ trợ</h4>
+	
+	<p>•  Công khai cơ chế giải quyết các tranh chấp phát sinh trong quá trình giao dịch trên sàn giao dịch thương mại điện tử Bonbanh.com. Khi người tiêu dùng mua hàng hóa hoặc dịch vụ phát sinh mâu thuẫn với người bán hoặc bị tổn hại lợi ích hợp pháp, Bonbanh.com sẽ cung cấp cho người tiêu dùng thông tin đăng ký của người bán ngay sau khi nhận được yêu cầu của người mua, tích cực hỗ trợ người tiêu dùng bảo vệ quyền và lợi ích hợp pháp của bản thân.</p>
+	<h4>5. Quyền và nghĩa vụ của thành viên</h4>
+	<b>a) Quyền của thành viên:</b><br>
+	• Khi đăng ký trở thành thành viên của Bonbanh.com và được Bonbanh.com đồng ý, thành viên sẽ được quyền đăng tin để giới thiệu tài sản và tiến hành giao dịch kinh doanh cũng như quảng bá doanh nghiệp của mình trên Sàn thương mại điện tử Bonbanh.com.<br>
+	• Thành viên sẽ được cấp một tên đăng ký và mật khẩu riêng để được vào sử dụng các dịch vụ, quản lý tin đăng và các giao dịch của mình trên Sàn thương mại điện tử Bonbanh.com.<br>
+	• Thành viên sẽ được nhân viên của Sàn thương mại điện tử Bonbanh.com hướng dẫn sử dụng được các công cụ, các tính năng phục vụ cho việc quản lý đăng tin, tiến hành giao dịch và sử dụng các dịch vụ tiện ích trên Sàn thương mại điện tử Bonbanh.com.<br>
+	• Thành viên sẽ được hưởng các chính sách ưu đãi do Sàn thương mại điện tử Bonbanh.com hay các đối tác thứ ba cung cấp trên Sàn thương mại điện tử Bonbanh.com. Các chính sách ưu đãi này sẽ được đăng tải trực tiếp trên Sàn thương mại điện tử Bonbanh.com hoặc được gửi trực tiếp đến các thành viên.<br>
+	• Thành viên có quyền đóng góp ý kiến cho Sàn thương mại điện tử Bonbanh.com trong quá trình hoạt động. Các kiến nghị được gửi trực tiếp bằng thư, fax hoặc email đến cho Sàn thương mại điện tử Bonbanh.com.<br>
+	<p><b>b) . Nghĩa vụ của thành viên:</b></p>
+	•  Thành viên sẽ tự chịu trách nhiệm về bảo mật và lưu giữ và mọi hoạt động sử dụng dịch vụ dưới tên đăng ký, mật khẩu và hộp thư điện tử của mình. Thành viên có trách nhiệm thông báo kịp thời cho Sàn thương mại điện tử Bonbanh.com về những hành vi sử dụng trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu của mình để hai bên cùng hợp tác xử lý.<br>
+	•  Thành viên cam kết những thông tin cung cấp cho Sàn thương mại điện tử Bonbanh.com và những thông tin đang tải lên Sàn thương mại điện tử Bonbanh.com là chính xác và hoàn chỉnh. Thành viên đồng ý giữ và thay đổi các thông tin trên Sàn thương mại điện tử Bonbanh.com là cập nhật, chính xác và hoàn chỉnh.<br>
+	•  Thành viên tự chịu trách nhiệm về nội dung, hình ảnh của thông tin Doanh nghiệp và các thông tin khác cũng như toàn bộ quá trình giao dịch với các đối tác trên Sàn thương mại điện tử Bonbanh.com.<br>
+	•  Thành viên cam kết, đồng ý không sử dụng dịch vụ của Sàn thương mại điện tử Bonbanh.com vào những mục đích bất hợp pháp, không hợp lý, lừa đảo, đe doạ, thăm rò thông tin bất hợp pháp, phá hoại, tạo ra và phát tán virus gây hư hại tới hệ thống, cấu hình, truyền tải thông tin của Sàn thương mại điện tử Bonbanh.com hay sử dụng dịch vụ của mình vào mục đích đầu cơ, lũng đoạn.<br>
+	<br>
+	<h3>IX. Điều khoản áp dụng</h3>
+	
+	<p>•  Mọi tranh chấp phát sinh giữa Bonbanh.com và một hay cách thành viên khác sẽ được giải quyết theo tinh thần hợp tác, thương luợng. Trường hợp hai (các) bên thương lượng không thành, tùy theo tích chất của việc tranh chấp, vụ việc sẽ được đưa ra phân xử tại Trung Tâm Trọng tài Quốc tế Việt Nam hoặc Tòa Án có thẩm quyền.</p>
+	<p>•  Bonbanh.com sẽ không liên quan và chịu trách nhiệm khi xảy tranh chấp phát sinh trong quá trình giao dịch giữa người mua và người bán.</p>
+	<p>•  Quy chế quản lý họat động này có hiệu lực từ ngày 01/01/2014, là ngày đăng tải trên website http://www.bonbanh.com</p>
+	<p>•  Trong trường hợp phải thay đổi nội dung Quy chế để phù hợp với thực tiễn họat động của Sàn Giao dịch TMĐT Bonbanh.com thì Ban Quản Trị sẽ thông báo trên Sàn cho các thành viên biết. Sau thời gian thông báo 05 ngày này, Quy chế mới - đã được sửa đổi - sẽ được áp dụng. Việc các thành viên tiếp tục sử dụng dịch vụ sau khi Quy chế mới được công bố và thực thì đồng nghĩa với việc các thành viên đã đồng ý và chấp nhận với Quy chế mới này</p>
+	<h4>Địa chỉ liên hệ chính thức của Sàn giao dịch thương mại điện tử Bonbanh.com:</h4>
+	<p>
+	Công ty Cổ Phần Kypernet Việt Nam<br>
+	Địa chỉ trụ sở công ty: Ô 63 LK 6B Làng Việt Kiều Châu Âu, KĐT Mỗ Lao, phường Mộ Lao, quận Hà Đông, Hà Nội<br>
+	Địa chỉ văn phòng làm việc: Phòng 312 tòa nhà 34T Hoàng Đạo Thúy, Cầu Giấy, Hà Nội<br>
+	Điện thoại: (04) 2215-2215<br>
+	Website: www.bonbanh.com<br>
+	Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script><br>
+	Email hỗ trợ: <script>document.write("sup"+"port@"+"bon"+"banh.com");</script><br>
+	</p>
+	
+	
+	
+	
+	
+	
+	</div>
+</div>
+<div id="footer">
+	<div class="l-footer"></div>
+	<div class="c-footer">
+		<div class="f-menu">
+			<a href="../index.html" class="f-link" title="oto, mua ban oto">Trang chủ</a> <span>|</span>
+			<a href="index.html#dangtin" class="f-link">Quy định đăng tin</a> <span>|</span>
+			<a href="index.html" class="f-link">Quy chế hoạt động</a> <span>|</span>
+			<a href="../sms/index.html" class="f-link">Dịch vụ tiện ích SMS</a> <span>|</span>
+			<a href="../gioi-thieu/index.html" class="f-link">Trợ giúp</a> <span>|</span>
+			<a href="../lien-he/index.html" class="f-link">Liên hệ</a> 
+		</div>
+		<div class="f-copyright">
+		<div style="float: left; width: 845px;">
+		Xem tốt nhất trên trình duyệt <a rel="nofollow"  class="f-copyright" target="_blank" href="http://www.mozilla.com/vi/" title="Tải Mozilla FireFox phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Mozilla FireFox</b></a> , <a rel="nofollow"  class="f-copyright"  target="_blank" href="http://www.google.com/chrome?hl=vi" title="Tải Google Chrome phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Google Chrome</b></a> hoặc <b>IE 7</b> trở lên với độ phân giải từ 1024x768 trở lên.<br>
+		Điện thoại: 04-2215 2215 / 04-2215 2246 . Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script>. <span style="">Hotline: <script>document.write("094"+" 2727"+" 225");</script></span><br>
+		<span style="color:red">Bonbanh không bán xe trực tiếp, quý khách mua xe vui lòng liên hệ trực tiếp người đăng tin.<br></span>
+		Copyright © 2006-2015 <a href="../index.html" title="oto, mua ban oto, oto nhap khau">Bonbanh.com</a> - <b style="font-weigth:bold">Công ty cổ phần Kypernet Việt Nam.</b> Mã số doanh nghiệp: 0101833960
+		</div>
+		<div style="float: right; width: 102px;margin-top:3px">
+		<a rel="nofollow"  href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=8610" target="_blank"><img src="../img/bct.gif" title="Bonbanh.com đã đăng ký với Bộ Công Thương" alt=""></a>
+		</div>
+		
+		
+		</div>
+		
+	</div>
+	<div class="r-footer"></div>
+</div>
+<div id="cookie_content" style="display:none">
+<div style="margin-bottom:3px;background:#FFFFE5;border: 1px solid #FFB64B;padding:5px 20px 5px 20px;">
+<div style="color:red">
+<img src='../img/reg_i.gif'> <b>Thông báo:</b> Trình duyệt của bạn không hỗ trợ <b>Cookie</b> hoặc đang tắt <b>Cookie</b>. Để chạy được các chức năng trên bonbanh.com trình duyệt của bạn cần phải bật <b>Cookie</b> !
+</div>
+<div style="text-align:center;color:#666;padding-top:5px;">
+Nếu trình duyệt của bạn tắt cookie bạn có thể bật lại cookie theo hướng dẫn sau đây : <a href="../bat-cookie/index.html">Bật Cookie trình duyệt</a>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="../js/ck.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1138176-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="abblock">
+    
+<!-- Begin Adbrand -->
+<script language="javascript" type="text/javascript">
+    var adbrand_zoneId = 'va_69E92C1B41314EB7';
+    var adbrand_width  = '250';
+    var adbrand_height = '250';
+    var adbrand_sizeId = '12';
+    var adbrand_typeId = '2'; 
+</script>
+<script type="text/javascript" src="../../embed.adbrand.net/adbrand.js"></script>
+<!-- End: Adbrand -->
+
+
+</div>
+
+</div>
+</body>
+
+<!-- Mirrored from www.bonbanh.com/quy-che-hoat-dong/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:37:30 GMT -->
+</html><!--t : tdb:0.00039815902709961/t3:0.00018692016601562/t4:0.00050687789916992/0.0012280941009521  -->

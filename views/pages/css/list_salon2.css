@@ -1,0 +1,113 @@
+#oclist 
+{
+	display:none;	
+	position: absolute;
+	float:right;
+	right:0px;
+	
+	background:#EFEFEF;
+	z-index:999;
+	margin:0px;
+	padding:0px;
+	list-style: none outside none;
+	padding-bottom:5px;
+	border:1px solid #ccc;
+	
+}
+#oclist ul 
+{
+	list-style: none outside none;
+	
+}
+#oclist ul li
+{
+	padding:3px 0px 3px 3px;
+	
+}
+#list_salon_content
+{
+	
+}
+.list_s_city {
+    background: none repeat scroll 0 0 #EAEAEA;
+    border-bottom: 1px solid #CCCCCC;
+    float: left;
+    padding: 8px 0;
+    width: 100%;
+}
+.list_s_city a {
+    padding: 2px 6px;
+    text-align: center;
+    text-indent: 2px;
+}
+
+.list_salons
+{
+	width:100%;
+	border: 1px solid #CCCCCC;	
+	float:left;
+}
+.salon_item
+{
+	width:233px;
+	height:105px;
+	padding:8px;
+	float:left;
+	border-right: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	overflow:hidden;
+}
+.s_vip
+{
+	background:#FFFFD9;
+	height:100px;
+	
+}
+.s_vip .s_i2,.s_vip .s_spec
+{
+	color:#222;
+}
+.last_col
+{
+	width:223px;
+	border-right: none;
+}
+.s_img
+{
+	width:65px;
+	float:right;
+	border:1px solid #DEDEDE;
+	padding:1px;
+	margin:2px;
+	opacity:0.8;filter:alpha(opacity=80)
+}
+a:hover .s_img
+{
+	opacity:1;filter:alpha(opacity=100)
+}
+.s_title
+{
+	font-size:13px;
+	font-weight:bold;
+}
+.s_i1
+{
+	height:75px;
+}
+.s_vip .s_i1
+{
+	height:70px;
+}
+
+.s_i2
+{
+	padding:3px 0;
+	color:#444;
+}
+.s_spec
+{
+	font-style:italic;
+	color:#666;
+	padding-top:5px;
+	font-size:11px;
+}

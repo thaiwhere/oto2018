@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+
+<!-- Mirrored from www.bonbanh.com/so-sanh-quyen-loi/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:37:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>So sánh quyền lợi giữa các cấp thành viên</title>
+<base />
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../css/register.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="../img/favico.ico"  type="image/x-icon"/>
+
+
+<script type="text/javascript" src="../js/jquery-1.3.2.min.js" ></script>
+<script language="javascript" src="../js/lib3.js"></script>  
+
+</head>
+<body >
+
+<div id="wrapper">
+<div id="header">
+<style>
+
+
+
+</style>
+<a id="logo"  href="../index.html" title="oto, mua ban oto"  ><h1>oto, mua ban oto</h1>
+</a>
+
+
+<div id="top-nav" style="*width:325px">
+	<ul>		
+		<li><a href="../dang-ky-thanh-vien/index.html">Đăng ký</a></li>
+		<li><a href="../thanh-vien/index.html" onclick="open_dialog('login-dlg','username1');return false;">Đăng nhập</a></li>
+		<li><a href="../gioi-thieu/index.html">Hướng dẫn</a></li>		
+		<li class="ilast"><a href="../lien-he/index.html">Liên hệ</a></li>
+</ul>		
+	<img src="../img/pixel.gif" class="img-top-nav-right"/>
+	
+</div>		
+
+
+
+<div id="nav-bar">
+	<a class="menu-item" href="../index.html" title="oto, mua ban oto">Trang chủ</a>
+	<a class="menu-item" href="../oto/index.html" title="Tìm mua ô tô">Tìm mua ô tô</a>
+	<a class="menu-item" href="../salon-oto/index.html">Salon Ôtô</a>
+	<a class="menu-item" href="../dang-tin-ban-xe/index.html" title="Bán ô tô">Bán ô tô</a>
+	<a class="menu-item" href="../tin-mua-xe/index.html" title="Các tin mua xe">Cần mua ?</a>
+		
+	<a class="menu-item" href="../my-bonbanh/index.html" title="Quản lý tin đăng của bạn...">My BonBanh</a>
+		</div>
+</div>
+<div id="cookie_alert" ></div>
+<div id="alert_content" ></div>
+	<!-- begin login diaglog-->
+		<div  id="login-dlg" style="display:none" class="dlg-box">
+		<div class="shadow">
+		<span class="close-btn"><a href="#" onclick="return close_dialog('login-dlg');">x</a></span>
+		<div id="login-frm">
+		<form  action="#" method="post">
+			<span class="input-label">Tên truy cập</span><span class="input-text"><input name="username1" id="username1" type="text" ></span>
+			<span class="input-label">Mật khẩu</span><span class="input-text"><input type="password" id="pass1" name="pass1"></span>
+			<div class="input-btn">
+			<input type="submit" name="login_btn" value="Đăng nhập" class="login_btn" onclick="return login_submit1();"/>
+			<a href="../quen-mat-khau/index.html">Quên mật khẩu ?</a>
+			</div>
+			<div style="float: left;width:260px;padding-left:20px;color:#666">Tên truy cập có thể là: tên truy cập/email/mobile tương ứng với tài khoản của bạn</div>
+			<div id="login_processing" ><img src="../img/processing.gif"></div>
+			
+		</form>
+		</div>
+		</div>
+		</div>
+	<!-- end login diaglog-->
+	
+<script>
+
+function login_submit1()
+{
+	$("#login_processing").show();
+	//$("#login_msg").hide();
+	var ct = new Date();
+	strURL='process_login/?T='+ct.getTime();
+	$.post(strURL, {username: $("#username1").val(),pass: $("#pass1").val()}, function(data){
+				if(data.length >0) {
+					
+					if(data=="OK")
+					{						
+						location.reload(true);
+
+					}else if(data=="OK1")
+					{
+						window.location="../my-bonbanh/index.html";
+					}else if(data=="NotExist")
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: Tên truy cập không có trong hệ thống!");
+					}else
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: mật khẩu không đúng hãy thử lại!");
+					}
+					
+				}else
+				{
+					$("#login_processing").hide();
+					alert("Lỗi đăng nhập: tên truy câp/mật khẩu không đúng hãy thử lại!");
+				}
+			});
+	return false;
+}
+
+</script><div class="breadcrum"><a href="../index.html">Trang chủ</a> &raquo; Quyền lợi thành viên</div>
+<div class="register" style="height:auto;padding-top:20px;line-height:16px;">
+	
+	<div class="pkg_header">Quyền lợi giữa các thành viên</div> 
+	<table width=960 class="pkg_table" cellspacing="0" cellpadding="0" bordercolor="#c9c9c9" border="1" style="border-collapse: collapse;">
+		<tr class="pkg_tbl_header">
+			<td width=160>Thông tin</td>
+			<td width=200>Thành viên thường (Free)</td>
+			<td width=200>Thành viên VIP1</td>
+			<td width=200>Thành viên VIP2</td>
+			<td width=200>Thành viên VIP3 / SALON</td>
+		</tr>
+		
+		<tr>
+			<td class="pkg_title">Đối tượng</td>
+			<td>Cá nhân có nhu cầu bán 1 xe</td>
+			<td>Cá nhân là môi giới có số lượng xe bán ít</td>
+			<td>Cá nhân là môi giới có nhu cầu bán nhiều xe</td>
+			<td>Công ty/ Salon có nhu cầu bán nhiều xe và quảng bá thương hiệu</td>
+		</tr>
+		<tr>
+			<td class="pkg_title">Số lượng tin đăng tối đa tại 1 thời điểm</td>
+			<td>1 tin miễn phí đầu tiên</td>
+			<td>5 tin</td>
+			<td>10 tin</td>
+			<td>20 tin</td>
+		</tr>
+		<tr>
+			<td class="pkg_title">Tin đăng mua qua <a href="../sms/index.html" target=_blank>SMS</a></td>
+			<td>Có thể đăng thêm 3 tin bán xe mua qua <a href="../sms/index.html" target=_blank>SMS</a> tại 1 thời điểm</td>
+			<td>Có thể đăng thêm 3 tin bán xe mua qua <a href="../sms/index.html" target=_blank>SMS</a> tại 1 thời điểm</td>
+			<td>Có thể đăng thêm 3 tin bán xe mua qua <a href="../sms/index.html" target=_blank>SMS</a> tại 1 thời điểm</td>
+			<td>Có thể đăng thêm 3 tin bán xe mua qua <a href="../sms/index.html" target=_blank>SMS</a> tại 1 thời điểm</td>
+		</tr>
+		<tr>
+			<td class="pkg_title">Số lần Up / làm mới tin được cấp</td>
+			<td><b>3</b> ngày cấp <b>1 lần Up</b></td>
+			<td><b>1</b> ngày cấp <b>3 lần Up</b></td>
+			<td><b>1</b> ngày cấp <b>6 lần Up</b></td>
+			<td><b>1</b> ngày cấp <b>9 lần Up</b></td>
+		</tr>
+		<tr>
+			<td class="pkg_title">Cơ chế Up / làm mới tin tự động</td>
+			<td>Không có </td>
+			<td>Có</td>
+			<td>Có</td>
+			<td>Có</td>
+		</tr>
+		<tr>
+			<td class="pkg_title">Tin phải qua kiểm duyệt trước khi đăng</td>
+			<td>Phải kiểm duyệt</td>
+			<td>Phải kiểm duyệt</td>
+			<td>Đăng ngay ( không qua kiểm duyệt)</td>
+			<td>Đăng ngay ( không qua kiểm duyệt)</td>
+		</tr>
+		<tr>
+			<td class="pkg_title">Có thể thay đổi thông tin liên hệ ( ĐT,tên, địa chỉ) theo từng tin đăng</td>
+			<td>Không có</td>
+			<td>Có</td>
+			<td>Có</td>
+			<td>Không</td>
+		</tr>
+		<tr>
+			<td class="pkg_title">Có website riêng trên bonbanh</td>
+			<td>Không có</td>
+			<td>Không có</td>
+			<td>Không có</td>
+			<td>Có website riêng trên bonbanh.com</td>
+		</tr>
+		<tr class="pkg_cost">
+			<td>Chi phí</td>
+			<td>Miễn phí</td>
+			<td>
+			200,000 đ/ 1 tháng<br>
+			<span style="font-weight:normal;font-style:italic">(đăng ký 3 tháng)</span>
+			</td>
+			<td>
+			360,000 VND/ 1 tháng<br>
+			<span style="font-weight:normal;font-style:italic">(đăng ký tối thiểu 3 tháng)</span>
+			</td>
+			<td>
+				600,000 VND / 1 tháng<br>
+				<span style="font-weight:normal;font-style:italic">(đăng ký tối thiểu 3 tháng)</span><br>
+				<span style="color:red">+ 200,000 VND phí khởi tạo gian hàng</span>
+			</td>
+		</tr>
+	</table>
+	<div class="pkg_notes">
+	<div style="text-align:center;font-weight:bold"><a  href="../dang-ky-thanh-vien-vip/index.html" class="b-button" style="margin-left:400px;padding:2px 5px 2px 5px;display:block;float:left">ĐĂNG KÝ THÀNH VIÊN VIP</a></div>
+	<div style="clear:both"></div>
+	<div style="color:blue;display:none;"><b>Khuyễn mãi:</b>
+		<ul style="list-style-type:circle;margin-left:30px">
+		<li>Đăng ký 3 tháng giảm <b>20%</b><li>
+		<li>Đăng ký 6 tháng giảm <b>25%</b><li>
+		<li>Đăng ký 1 năm giảm <b>30%</b></li>
+		</ul>
+	</div>
+		<font style="font-weight:bold;color:red;">Ghi chú:</font> <br>
+		Tin đăng bán xe của tất cả các thành viên trong <b>Bonbanh</b> là bình đẳng như nhau. Bonbanh sẽ không ưu tiên tin đăng cho 1 thành viên cụ thể nào cả. Thứ tự ưu tiên trong kết quả tìm kiếm tin bán xe được dựa trên nội dung của tin bán xe( Các tin bán xe có đầy đủ thông tin và có ảnh thật sẽ ưu tiên hơn các tin bán xe có ít thông tin và không có ảnh ) và thời gian đăng tin hay làm mới tin (Up tin) ( các tin mới đăng / làm mới tin sẽ xuất hiện trước các tin đăng cũ hơn) . Tất cả các thành viên trong Bonbanh đều phải tuân theo <a target="_blank" href="../quy-dinh/index.html#dangtin">quy định đăng tin</a> và <a target="_blank" href="../quy-dinh/index.html#uptin">quy định Up tin</a>
+	</div>
+</div>
+<div id="footer">
+	<div class="l-footer"></div>
+	<div class="c-footer">
+		<div class="f-menu">
+			<a href="../index.html" class="f-link" title="oto, mua ban oto">Trang chủ</a> <span>|</span>
+			<a href="../quy-che-hoat-dong/index.html#dangtin" class="f-link">Quy định đăng tin</a> <span>|</span>
+			<a href="../quy-che-hoat-dong/index.html" class="f-link">Quy chế hoạt động</a> <span>|</span>
+			<a href="../sms/index.html" class="f-link">Dịch vụ tiện ích SMS</a> <span>|</span>
+			<a href="../gioi-thieu/index.html" class="f-link">Trợ giúp</a> <span>|</span>
+			<a href="../lien-he/index.html" class="f-link">Liên hệ</a> 
+		</div>
+		<div class="f-copyright">
+		<div style="float: left; width: 845px;">
+		Xem tốt nhất trên trình duyệt <a rel="nofollow"  class="f-copyright" target="_blank" href="http://www.mozilla.com/vi/" title="Tải Mozilla FireFox phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Mozilla FireFox</b></a> , <a rel="nofollow"  class="f-copyright"  target="_blank" href="http://www.google.com/chrome?hl=vi" title="Tải Google Chrome phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Google Chrome</b></a> hoặc <b>IE 7</b> trở lên với độ phân giải từ 1024x768 trở lên.<br>
+		Điện thoại: 04-2215 2215 / 04-2215 2246 . Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script>. <span style="">Hotline: <script>document.write("094"+" 2727"+" 225");</script></span><br>
+		<span style="color:red">Bonbanh không bán xe trực tiếp, quý khách mua xe vui lòng liên hệ trực tiếp người đăng tin.<br></span>
+		Copyright © 2006-2015 <a href="../index.html" title="oto, mua ban oto, oto nhap khau">Bonbanh.com</a> - <b style="font-weigth:bold">Công ty cổ phần Kypernet Việt Nam.</b> Mã số doanh nghiệp: 0101833960
+		</div>
+		<div style="float: right; width: 102px;margin-top:3px">
+		<a rel="nofollow"  href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=8610" target="_blank"><img src="../img/bct.gif" title="Bonbanh.com đã đăng ký với Bộ Công Thương" alt=""></a>
+		</div>
+		
+		
+		</div>
+		
+	</div>
+	<div class="r-footer"></div>
+</div>
+<div id="cookie_content" style="display:none">
+<div style="margin-bottom:3px;background:#FFFFE5;border: 1px solid #FFB64B;padding:5px 20px 5px 20px;">
+<div style="color:red">
+<img src='../img/reg_i.gif'> <b>Thông báo:</b> Trình duyệt của bạn không hỗ trợ <b>Cookie</b> hoặc đang tắt <b>Cookie</b>. Để chạy được các chức năng trên bonbanh.com trình duyệt của bạn cần phải bật <b>Cookie</b> !
+</div>
+<div style="text-align:center;color:#666;padding-top:5px;">
+Nếu trình duyệt của bạn tắt cookie bạn có thể bật lại cookie theo hướng dẫn sau đây : <a href="../bat-cookie/index.html">Bật Cookie trình duyệt</a>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="../js/ck.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1138176-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="abblock">
+    
+<!-- Begin Adbrand -->
+<script language="javascript" type="text/javascript">
+    var adbrand_zoneId = 'va_69E92C1B41314EB7';
+    var adbrand_width  = '250';
+    var adbrand_height = '250';
+    var adbrand_sizeId = '12';
+    var adbrand_typeId = '2'; 
+</script>
+<script type="text/javascript" src="../../embed.adbrand.net/adbrand.js"></script>
+<!-- End: Adbrand -->
+
+
+</div>
+
+</div>
+</body>
+
+<!-- Mirrored from www.bonbanh.com/so-sanh-quyen-loi/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:37:30 GMT -->
+</html><!--t : tdb:0.00044894218444824/t3:0.00037288665771484/t4:0.00092720985412598/0.0019869804382324  -->

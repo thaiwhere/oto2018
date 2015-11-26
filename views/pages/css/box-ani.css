@@ -1,0 +1,13 @@
+
+ .aniBox {vertical-align:middle;font:bold 0.85em verdana;margin-left:3px;}
+ .aniBox a{color:#522103;display:block;float:left;padding:6px 0 0 12px;margin:4px 2px 0 2px;background:#fff;height:30px;width:128px;border-right:1px solid #DB7244;border-bottom:1px solid #DB7244;border-left:1px solid #FFAF37;border-top:1px solid #FFAF37;}
+ .aniBox a:link, .aniBox a:visited, .aniBox a:hover{color:#522103;text-decoration:none;}
+ .aniBox a.mouseHover{height:34px;border-bottom:none!important;}
+ .aniBox a.freeIcon{background:#fff url('../img/free_icon.gif') no-repeat top right;}
+ .aniBox a.singleFile{line-height:25px;}
+ .aniBox .aniBoxContent{font:lighter 1.1em tahoma;color:#522103;padding:12px 0 8px 12px;width:274px;margin-left:2px!important;clear:both;margin-left:4px;background:#fff url(../img/bordertop.gif) top right no-repeat;border-right:1px solid #DB7244;border-bottom:1px solid #DB7244;border-left:1px solid #FFAF37;}
+ .aniBox .aniBoxContent a{height:auto;width:auto;display:inline;float:none;padding:0;margin:0; border:none;}
+ .aniBox .aniBoxContent a:link{color:#039;text-decoration:underline;}
+ .aniBox .aniBoxContent a:visited{color:#969;text-decoration:underline;}
+ .aniBox .aniBoxContent a:hover{color:#f60;text-decoration:underline;}
+ 

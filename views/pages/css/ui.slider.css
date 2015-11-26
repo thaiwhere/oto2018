@@ -1,0 +1,54 @@
+/* Slider
+----------------------------------*/
+.ui-slider { position: relative; text-align: left; }
+.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em;  }
+.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; }
+
+.ui-slider-horizontal { height: .8em; }
+.ui-slider-horizontal .ui-slider-handle { top: -.3em; margin-left: -.6em; }
+.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+.ui-slider-vertical { width: .8em; height: 100px; }
+.ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em; }
+.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+#handle1
+{
+	background: url(../img/max-arrow.gif);
+	top:-16px;
+	height:18px;
+}
+#handle0
+{
+	background: url(../img/min-arrow.gif);
+	top:10px;
+	height:18px;
+	margin-left:-5px;
+	
+}
+a:hover #handle1 
+{
+	cursor:pointer;
+}
+ #slider { margin-left: 5px; width:502px;float:left;}
+#slider_val_bg
+{
+	background: url(../img/price_list_bg.gif);
+	width:532px;
+	height:14px;
+	float:left;
+	margin-left:0px ;
+	margin-top:20px
+	
+}
+#price_slider
+{
+	float:left;
+	margin-left:0px;
+	width:535px;
+	margin-top:3px;
+}

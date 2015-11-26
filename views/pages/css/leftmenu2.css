@@ -1,0 +1,174 @@
+
+
+/* The wrapper determines the width of the menu elements */
+#menuwrapper { 
+   width: 100%; 
+}
+
+
+/* Unless you know what you do, do not touch this */ 
+#primary-nav, #primary-nav ul { 
+   list-style: none; 
+   margin: 0px; 
+   padding: 0px; 
+   width: 100%; 
+   margin-left: -1px;
+}
+#primary-nav ul { 
+   position: absolute; 
+   top: 0; 
+   left: 100%; 
+   display: none; 
+}
+#primary-nav li { 
+   margin-bottom: -1px; 
+   position: relative; 
+}
+
+
+/* Styling the basic apperance of the menu elements */
+#primary-nav a { 
+  
+   display: block; 
+   margin: 0px; 
+   padding: 4px 10px 0px 20px; 
+   color: #0834CE;
+   text-decoration: none; 
+   background: transparent; 
+   min-height:1em; /* Fixes IE7 whitespace bug*/ 
+   font-size:13px;
+   font-weight:bold;
+}
+#primary-nav a:hover{ 
+	color:#F78025;
+	text-decoration: underline; 
+}
+#primary-nav li, #primary-nav li.menuparent { 
+   /*background-color: #ececec; */
+   min-height:1em; /* Fixes IE7 bug*/
+}
+#primary-nav li li		/*menu con*/
+{
+	background-color: #FCF8C4;
+	width:110px;
+	float:left;
+}
+
+/* Styling the basic apperance of the active page elements (shows what page in the menu is being displayed) */
+#primary-nav li.menuactive { 
+   background-color: #C7C7C7; 
+}
+
+/* Styling the basic apperance of the menuparents - here styled the same on hover (fixes IE bug) */
+#primary-nav li.menuparent, 
+#primary-nav li.menuparent:hover, 
+#primary-nav li.menuparenth { 
+   background-image: url(images/cms/arrow.gif); 
+   background-position: center right; 
+   background-repeat: no-repeat; 
+}
+
+
+/* Styling the apperance of menu items on hover */
+#primary-nav li:hover, 
+#primary-nav li.menuh, 
+#primary-nav li.menuparenth, 
+#primary-nav li.menuactiveh { 
+   background-color: #FCEDC4; /*mau nen khi mousehover*/
+   
+   
+}
+
+
+/* The magic - set to work for up to a 3 level menu, but can be increased unlimited */
+#primary-nav ul
+{
+	
+	width:330px;
+	background:#FCF8C4;
+	border: 1px solid #FFB64B; 
+	padding:2px;
+}
+#mp17 ul,#mp37 ul,#mp52 ul,#mp5 ul,#mp7 ul,#mp9 ul,#mp30 ul,#mp38 ul,#mp55 ul,#mp57 ul,#mp67 ul,#mp71 ul,#mp55 ul,#mp69 ul,#mp13 ul,#mp21 ul,#mp51 ul
+{
+	width:220px;	
+}
+#mp21 ul
+{
+	width:330px;	
+}
+#mp75 ul,#mp6 ul,#mp8 ul,#mp11 ul,#mp12 ul,#mp14 ul,#mp18 ul,#mp20 ul,#mp23 ul,#mp25 ul,#mp27 ul,#mp29 ul,#mp32 ul,#mp34 ul,#mp35 ul,#mp73 ul,#mp78 ul,#mp42 ul,#mp76 ul,#mp58 ul,#mp59 ul,#mp77 ul,#mp66 ul,#mp72 ul,#mp80 ul,#mp81 ul,#mp82 ul,#mp15 ul,#mp79 ul,#mp86 ul,#mp87 ul,#mp84 ul,#mp88 ul,#mp31 ul,#mp47 ul,#mp54 ul,#mp56 ul,#mp10 ul,#mp39 ul,#mp45 ul
+{
+	width:110px;	
+}
+#mp74 ul
+{
+	display:none;
+	width:0px;
+}
+#primary-nav li:hover ul
+{
+	 display: block; 
+}
+#primary-nav li:hover ul ul, 
+#primary-nav li.menuparenth ul, 
+#primary-nav li.menuparenth ul ul { 
+   display: none; 
+  
+}
+#primary-nav li:hover ul, 
+#primary-nav ul li:hover ul, 
+#primary-nav ul ul li:hover ul, 
+#primary-nav li.menuparenth ul, 
+#primary-nav ul li.menuparenth ul, 
+#primary-nav ul ul li.menuparenth ul { 
+   display: block; 
+}
+
+
+/* IE Hack, will cause the css to not validate */
+
+#primary-nav li, #primary-nav li.menuparenth { _float: left; _height: 1%; }
+#primary-nav li a { _height: 1%; }
+
+
+/* section header */
+#primary-nav li.sectionheader {
+   border-left: 1px solid #006699; 
+   border-top: 1px solid #006699; 
+   font-size: 130%;
+   font-weight: bold;
+   padding: 1.5em 0 0.8em 0.5em;
+   background-color: #fff;
+   margin: 0;
+   width: 100%;
+}
+
+
+/* separator */
+#primary-nav li hr.separator {
+   display:block;
+   height: 0.5em;
+   color: #abb0b6;
+   background-color: #abb0b6;
+   width: 100%;
+   border:0;
+   margin:0;
+   padding:0;   
+   border-top: 1px solid #006699;
+   border-right: 1px solid #006699;
+}
+
+/* End of 'Navigation: CSSMenu - Vertical' */
+
+#primary-nav #o_make_lnk{     
+	
+	background: url(../img/down_arr.gif) 120px 1px no-repeat;	
+	color:#C83D14;
+	
+
+}
+.add_menu
+{
+	
+}

@@ -1,0 +1,869 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+
+<!-- Mirrored from www.bonbanh.com/tin-mua-xe/page,4/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:39:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tin mua xe tại Bonbanh.com</title>
+<base />
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<link rel="shortcut icon" href="../../img/favico.ico"  type="image/x-icon"/>
+<link href="../../css/main.css" rel="stylesheet" type="text/css" />
+
+
+<link href="../../css/register.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="../../js/vietuni.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/jquery-1.3.2.min.js" ></script>
+<script language="javascript" src="../../js/lib3.js"></script>  
+
+<script>
+var cur_url='index.html';
+var pricerange='0';
+
+$(document).ready(function(){
+	active_filter_link('pricerange',pricerange);
+  });
+function do_post_ajax()
+{
+
+	$("#loading_data").show();
+	var ct = new Date();
+	strURL=cur_url.replace('tin-mua-xe','tin-mua-xe-ajax')+'?t='+ct.getTime();
+	
+	$.post(strURL,{bbsajaxurl2:cur_url,ajax:1,pricerange:pricerange}, function(data){
+				if(data.length >0) {
+					//alert(data);
+					$("#loading_data").hide();					
+					$("#search_content").html(data);
+					
+					
+				}else
+				{
+					$("#loading_data").hide();
+					alert("Có lỗi xảy ra khi kết nối máy chủ. Hãy thử lại");
+				}
+			});
+}
+
+function do_filter(obj)
+{
+	id=$(obj).attr('id');
+	$arr=id.split('_');
+	eval($arr[0]+"="+$arr[1]);		
+	active_filter_link($arr[0],$arr[1]);	
+	
+	do_post_ajax();
+	
+}
+function active_filter_link(name,val)
+{
+	$("#"+name+"_group a").each(function() 
+	{ 
+		$(this).removeClass("priceactive");
+		id=$(this).attr('id');
+		$arr=id.split('_');
+		if($arr[1]==val)
+		{
+			$(this).addClass("priceactive");
+		}
+	});
+}
+
+</script>
+
+<style>
+.ad_tbl td
+{
+	padding:5px;
+	border-right:1px solid #ccc;
+	text-align:center;
+	line-height:16px;
+	vertical-align: top;
+}
+.ad_tbl td span {padding-bottom:10px;}
+</style>
+
+</head>
+<body >
+<div id="wrapper">
+
+<div id="header">
+<style>
+
+
+
+</style>
+<a id="logo"  href="../../index.html" title="oto, mua ban oto"  ><h1>oto, mua ban oto</h1>
+</a>
+
+
+<div id="top-nav" style="*width:325px">
+	<ul>		
+		<li><a href="../../dang-ky-thanh-vien/index.html">Đăng ký</a></li>
+		<li><a href="../../thanh-vien/index.html" onclick="open_dialog('login-dlg','username1');return false;">Đăng nhập</a></li>
+		<li><a href="../../gioi-thieu/index.html">Hướng dẫn</a></li>		
+		<li class="ilast"><a href="../../lien-he/index.html">Liên hệ</a></li>
+</ul>		
+	<img src="../../img/pixel.gif" class="img-top-nav-right"/>
+	
+</div>		
+
+
+
+<div id="nav-bar">
+	<a class="menu-item" href="../../index.html" title="oto, mua ban oto">Trang chủ</a>
+	<a class="menu-item" href="../../oto/index.html" title="Tìm mua ô tô">Tìm mua ô tô</a>
+	<a class="menu-item" href="../../salon-oto/index.html">Salon Ôtô</a>
+	<a class="menu-item" href="../../dang-tin-ban-xe/index.html" title="Bán ô tô">Bán ô tô</a>
+	<a class="menu-item" href="../index.html" title="Các tin mua xe">Cần mua ?</a>
+		
+	<a class="menu-item" href="../../my-bonbanh/index.html" title="Quản lý tin đăng của bạn...">My BonBanh</a>
+				<form name=fsearch id=fsearch action="http://www.bonbanh.com/tin-mua-xe/" method=post>
+	<span id="search-input-top">
+						<span id="search-input-bot">
+							<span id="search-field"><input type="text" value=""  maxlength="64" name="search_txt" id="search_txt" style="" autocomplete="off"/></span>
+							<span id="search-button"><input type="image"  alt="Submit" src="../../img/search_bar_btn.gif" name="submit"/></span>
+							
+						</span>
+   </span>
+   </form>
+   </div>
+</div>
+<div id="cookie_alert" ></div>
+<div id="alert_content" ></div>
+	<!-- begin login diaglog-->
+		<div  id="login-dlg" style="display:none" class="dlg-box">
+		<div class="shadow">
+		<span class="close-btn"><a href="#" onclick="return close_dialog('login-dlg');">x</a></span>
+		<div id="login-frm">
+		<form  action="#" method="post">
+			<span class="input-label">Tên truy cập</span><span class="input-text"><input name="username1" id="username1" type="text" ></span>
+			<span class="input-label">Mật khẩu</span><span class="input-text"><input type="password" id="pass1" name="pass1"></span>
+			<div class="input-btn">
+			<input type="submit" name="login_btn" value="Đăng nhập" class="login_btn" onclick="return login_submit1();"/>
+			<a href="../../quen-mat-khau/index.html">Quên mật khẩu ?</a>
+			</div>
+			<div style="float: left;width:260px;padding-left:20px;color:#666">Tên truy cập có thể là: tên truy cập/email/mobile tương ứng với tài khoản của bạn</div>
+			<div id="login_processing" ><img src="../../img/processing.gif"></div>
+			
+		</form>
+		</div>
+		</div>
+		</div>
+	<!-- end login diaglog-->
+	
+<script>
+
+function login_submit1()
+{
+	$("#login_processing").show();
+	//$("#login_msg").hide();
+	var ct = new Date();
+	strURL='process_login/?T='+ct.getTime();
+	$.post(strURL, {username: $("#username1").val(),pass: $("#pass1").val()}, function(data){
+				if(data.length >0) {
+					
+					if(data=="OK")
+					{						
+						location.reload(true);
+
+					}else if(data=="OK1")
+					{
+						window.location="../../my-bonbanh/index.html";
+					}else if(data=="NotExist")
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: Tên truy cập không có trong hệ thống!");
+					}else
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: mật khẩu không đúng hãy thử lại!");
+					}
+					
+				}else
+				{
+					$("#login_processing").hide();
+					alert("Lỗi đăng nhập: tên truy câp/mật khẩu không đúng hãy thử lại!");
+				}
+			});
+	return false;
+}
+
+</script>
+<div class="breadcrum"><a href="#">Trang chủ</a> &raquo; <b>Tin mua ô tô</b>
+	<a class="b-button" href="../../dang-tin-mua-xe/index.html" id="btn_post_buy">Đăng tin mua xe</a>
+</div>
+<!-- begin city diaglog-->
+	<div  id="city-dlg" style="display:none" class="dlg-box">
+	<div class="shadow">
+	<span class="close-btn"><a href="#" onclick="return close_dialog('city-dlg');">x</a></span>
+	
+	<!-- begin list city -->
+		<!-- cache 2--><!--timcity=4.3153762817383E-5-->	<div align="center" class="AllCity"><a href="../../tinh-thanh/c%2ctoan_quoc.html">[Toàn quốc]</a></div>
+	<div class="RegionBlock">
+		<div class="Region">Miền Bắc</div>
+						<a href="../../tinh-thanh/c%2cHa_Noi.html" class="city-item" rel="nofollow"><b>Hà Nội</b></a>
+				
+						<a href="../../tinh-thanh/c%2cBac_Giang.html" class="city-item" rel="nofollow">Bắc Giang</a>
+				
+						<a href="../../tinh-thanh/c%2cBac_Kan.html" class="city-item" rel="nofollow">Bắc Kạn</a>
+				
+						<a href="../../tinh-thanh/c%2cBac_Ninh.html" class="city-item" rel="nofollow">Bắc Ninh</a>
+				
+						<a href="../../tinh-thanh/c%2cCao_Bang.html" class="city-item" rel="nofollow">Cao Bằng</a>
+				
+						<a href="../../tinh-thanh/c%2cDien_Bien.html" class="city-item" rel="nofollow">Điện Biên</a>
+				
+						<a href="../../tinh-thanh/c%2cHai_Duong.html" class="city-item" rel="nofollow">Hải Dương</a>
+				
+						<a href="../../tinh-thanh/c%2cHai_Phong.html" class="city-item" rel="nofollow">Hải Phòng</a>
+				
+						<a href="../../tinh-thanh/c%2cHa_Giang.html" class="city-item" rel="nofollow">Hà Giang</a>
+				
+						<a href="../../tinh-thanh/c%2cHa_Nam.html" class="city-item" rel="nofollow">Hà Nam</a>
+				
+						<a href="../../tinh-thanh/c%2cHoa_Binh.html" class="city-item" rel="nofollow">Hòa Bình</a>
+				
+						<a href="../../tinh-thanh/c%2cHung_Yen.html" class="city-item" rel="nofollow">Hưng Yên</a>
+				
+						<a href="../../tinh-thanh/c%2cLai_Chau.html" class="city-item" rel="nofollow">Lai Châu</a>
+				
+						<a href="../../tinh-thanh/c%2cLang_Son.html" class="city-item" rel="nofollow">Lạng Sơn</a>
+				
+						<a href="../../tinh-thanh/c%2cLao_Cai.html" class="city-item" rel="nofollow">Lào Cai</a>
+				
+						<a href="../../tinh-thanh/c%2cNam_Dinh.html" class="city-item" rel="nofollow">Nam Định</a>
+				
+						<a href="../../tinh-thanh/c%2cNinh_Binh.html" class="city-item" rel="nofollow">Ninh Bình</a>
+				
+						<a href="../../tinh-thanh/c%2cPhu_Tho.html" class="city-item" rel="nofollow">Phú Thọ</a>
+				
+						<a href="../../tinh-thanh/c%2cQuang_Ninh.html" class="city-item" rel="nofollow">Quảng Ninh</a>
+				
+						<a href="../../tinh-thanh/c%2cSon_La.html" class="city-item" rel="nofollow">Sơn La</a>
+				
+						<a href="../../tinh-thanh/c%2cThai_Binh.html" class="city-item" rel="nofollow">Thái Bình</a>
+				
+						<a href="../../tinh-thanh/c%2cThai_Nguyen.html" class="city-item" rel="nofollow">Thái Nguyên</a>
+				
+						<a href="../../tinh-thanh/c%2cThanh_Hoa.html" class="city-item" rel="nofollow">Thanh Hóa</a>
+				
+						<a href="../../tinh-thanh/c%2cTuyen_Quang.html" class="city-item" rel="nofollow">Tuyên Quang</a>
+				
+						<a href="../../tinh-thanh/c%2cVinh_Phuc.html" class="city-item" rel="nofollow">Vĩnh Phúc</a>
+				
+						<a href="../../tinh-thanh/c%2cYen_Bai.html" class="city-item" rel="nofollow">Yên Bái</a>
+				
+				
+		
+	</div>					
+	<div class="RegionBlock">
+		<div class="Region">Miền Trung</div>
+				
+				<a href="../../tinh-thanh/c%2cDa_Nang.html" class="city-item" rel="nofollow"><b>Đà  Nẵng</b></a>
+				
+				
+				<a href="../../tinh-thanh/c%2cBinh_Dinh.html" class="city-item" rel="nofollow">Bình Định</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cBinh_Phuoc.html" class="city-item" rel="nofollow">Bình Phước</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cBinh_Thuan.html" class="city-item" rel="nofollow">Bình Thuận</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cDak_Lak.html" class="city-item" rel="nofollow">Đăk Lăk</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cDak_Nong.html" class="city-item" rel="nofollow">Đăk Nông</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cGiaLai.html" class="city-item" rel="nofollow">Gia  Lai</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cHa_Tinh.html" class="city-item" rel="nofollow">Hà  Tĩnh</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cKhanh_Hoa.html" class="city-item" rel="nofollow">Khánh Hòa</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cKon_Tum.html" class="city-item" rel="nofollow">Kon Tum</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cLam_Dong.html" class="city-item" rel="nofollow">Lâm Đồng</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cNghe_An.html" class="city-item" rel="nofollow">Nghệ An</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cNinh_Thuan.html" class="city-item" rel="nofollow">Ninh Thuận</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cPhu_Yen.html" class="city-item" rel="nofollow">Phú Yên</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cQuang_Binh.html" class="city-item" rel="nofollow">Quảng Bình</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cQuang_Nam.html" class="city-item" rel="nofollow">Quảng Nam</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cQuang_Ngai.html" class="city-item" rel="nofollow">Quảng Ngãi</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cQuang_Tri.html" class="city-item" rel="nofollow">Quảng Trị</a>
+				
+				
+				<a href="../../tinh-thanh/c%2cThua_Thien_Hue.html" class="city-item" rel="nofollow">Thừa Thiên Huế</a>
+				
+			
+	</div>					
+	<div class="RegionBlock">
+		<div class="Region">Miền Nam</div>		
+							<a href="../../tinh-thanh/c%2cTP_HCM.html" class="city-item" rel="nofollow"><b>TP HCM</b></a>
+				
+							<a href="../../tinh-thanh/c%2cAn_Giang.html" class="city-item" rel="nofollow">An Giang</a>
+				
+							<a href="../../tinh-thanh/c%2cBac_Lieu.html" class="city-item" rel="nofollow">Bạc Liêu</a>
+				
+							<a href="../../tinh-thanh/c%2cBa_Ria-_Vung_Tau.html" class="city-item" rel="nofollow">Bà Rịa- Vũng Tàu</a>
+				
+							<a href="../../tinh-thanh/c%2cBen_Tre.html" class="city-item" rel="nofollow">Bến Tre</a>
+				
+							<a href="../../tinh-thanh/c%2cBinh_Duong.html" class="city-item" rel="nofollow">Bình Dương</a>
+				
+							<a href="../../tinh-thanh/c%2cCan_Tho.html" class="city-item" rel="nofollow">Cần Thơ</a>
+				
+							<a href="../../tinh-thanh/c%2cCa_Mau.html" class="city-item" rel="nofollow">Cà Mau</a>
+				
+							<a href="../../tinh-thanh/c%2cDong_Nai.html" class="city-item" rel="nofollow">Đồng Nai</a>
+				
+							<a href="../../tinh-thanh/c%2cDong_Thap.html" class="city-item" rel="nofollow">Đồng Tháp</a>
+				
+							<a href="../../tinh-thanh/c%2cHau_Giang.html" class="city-item" rel="nofollow">Hậu Giang</a>
+				
+							<a href="../../tinh-thanh/c%2cKien_Giang.html" class="city-item" rel="nofollow">Kiên Giang</a>
+				
+							<a href="../../tinh-thanh/c%2cLong_An.html" class="city-item" rel="nofollow">Long An</a>
+				
+							<a href="../../tinh-thanh/c%2cSoc_Trang.html" class="city-item" rel="nofollow">Sóc Trăng</a>
+				
+							<a href="../../tinh-thanh/c%2cTay_Ninh.html" class="city-item" rel="nofollow">Tây Ninh</a>
+				
+							<a href="../../tinh-thanh/c%2cTien_Giang.html" class="city-item" rel="nofollow">Tiền Giang</a>
+				
+							<a href="../../tinh-thanh/c%2cTra_Vinh.html" class="city-item" rel="nofollow">Trà Vinh</a>
+				
+							<a href="../../tinh-thanh/c%2cVinh_Long.html" class="city-item" rel="nofollow">Vĩnh Long</a>
+				
+			
+	</div>				
+	<!-- end list city -->
+	</div>
+	</div>
+	<!-- end city diaglog-->
+	<div class="city-box" style="margin-top:-5px">
+				<a href="../../tinh-thanh/c%2ctoan_quoc.html" >Toàn quốc</a>		
+				<a href="../../tinh-thanh/c%2cHa_Noi.html" >Hà Nội</a>		
+				<a href="../../tinh-thanh/c%2cTP_HCM.html" >TP HCM</a>		
+				<a href="../../tinh-thanh/c%2cDa_Nang.html" class="c-active">Đà Nẵng</a>		
+			
+		
+		<a class="last-item" href="#" onclick="return open_dialog('city-dlg');">Chọn tỉnh thành khác<img src="../../img/arrow-down.jpg"></a>
+	</div>
+	<div id="loading_data">Đang đọc dữ liệu...Vui lòng chờ trong giây lát ! </div>
+
+
+	<div class="list_buy_cars">
+		<div class="bcar_header">
+		<div id="pricerange_group" class="bcar_listprice">
+			<span><b>Mức giá: </b> &nbsp;</span>
+			<a id="pricerange_0" href="javascript:void(0);" onclick="javascript:do_filter(this);" class="priceactive">Tất cả</a>
+			<a id="pricerange_1" href="javascript:void(0);" onclick="javascript:do_filter(this);">Dưới 200 Triệu</a> 
+			<a id="pricerange_2" href="javascript:void(0);" onclick="javascript:do_filter(this);">200-400 Triệu</a> 
+			<a id="pricerange_3" href="javascript:void(0);" onclick="javascript:do_filter(this);">400-600 Triệu</a>
+			<a id="pricerange_4" href="javascript:void(0);" onclick="javascript:do_filter(this);">600-800 Triệu</a>
+			<a id="pricerange_5" href="javascript:void(0);" onclick="javascript:do_filter(this);">800-1 Tỉ</a>
+			<a id="pricerange_6" href="javascript:void(0);" onclick="javascript:do_filter(this);">Trên 1 Tỉ</a>
+		</div>
+		
+		</div>
+<div id="search_content">		
+			
+		<div class="pagging">
+			<div class="cpage">Trang 4 / 5 </div>
+			
+			<div class="navpage">
+				<div class="navpage"> <a class='first' href='../index.html'><<</a><a href='../page%2c3/index.html'>&nbsp;<&nbsp;</a><a href='../page%2c1/index.html'>1</a><a href='../page%2c2/index.html'>2</a><a href='../page%2c3/index.html'>3</a><span class='pactive'>4</span><a href='../page%2c5/index.html'>5</a><a href='../page%2c5/index.html'>&nbsp;>&nbsp;</a><a href='../page%2c5/index.html'>>></a></div>		
+			</div>
+			<div style="float:right;margin:5px 10px 0px 0px;;">Tổng số : <b>73</b> tin</div>
+		</div>
+		<!-- bat dau quang cao-->	
+			<div>
+			
+			<table border="0" class="ad_tbl" style="background:#FFFFD9;border-bottom:1px solid #ccc;float:left;border-collapse: collapse;" border=1 bordercolor="#c9c9c9" width="100%">
+			  <tr>
+				
+				<td width="25%" height="100" style="">
+				<div style="font-weight:bold;font-size:15px;color:#0331C4;margin-bottom:5px;">Thang Long Auto</div>
+				 Chuyên mua xe ô tô đã qua sử dụng 4-9 chỗ, giá cao, thủ thục nhanh gọn đơn giản, thanh toán 1 lần tiền mặt , hoa hồng cho người giới thiệu. <br><br>
+				 <font size="3"; color="red">
+ LH : 097.707.5555-090.439.5521</font> 
+				 <br>
+				[Hà Nội]
+				</td>
+				<td width="25%" height="100" >
+				<div style="font-weight:bold;font-size:15px;color:#0331C4;margin-bottom:5px;">Salon Ô tô Nhất Tâm </div>
+				
+				
+				Chuyên mua bán, <b>cầm cố</b> các loại xe ô tô đã qua sử dụng từ 4-16 chỗ. Lịch sự, kín đáo, thanh toán 1 lần. Có hoa hồng cao cho người giới thiệu.
+				<br/>
+				<br/>
+				<font size="3"; color="red">LH: Anh Cương 0903.922.497</font>
+				<br> [TPHCM]
+				</td>
+				<td width="25%" height="100" >
+				<div style="font-weight:bold;font-size:15px;color:#0331C4;margin-bottom:5px;">Nam Chung Auto </div>
+				
+				
+				Cần mua ôtô cũ 4 - 16 chỗ giá cao nhất, xem xe quyết định ngay, vui vẻ - nhiệt tình - lịch sự, thanh toán tiền một lần nhanh gọn, hoa hồng cao cho người giới thiệu.
+				<br/>
+				<br/>
+				<font size="3"; color="red">LH: 0913.222.686</font>
+				<br> [Hà Nội]
+				</td>
+				<td width="25%" height="100" >
+				<div style="font-weight:bold;font-size:15px;color:#0331C4;margin-bottom:5px;">Công ty TNHH Thanh Hải </div>
+				
+				
+				Mua xe ô tô đã qua sử dụng giá cao, mua xe 4-29 chỗ, xe tải từ 500kg - 2.5 tấn, xe biển tỉnh, xe công ty... nhanh gọn, thanh toán một lần, hoa hồng cao cho người giới thiệu.
+				<br/>
+				<br/>
+				<font size="3"; color="red">LH: 0912.888.099</font>
+				<br> [TPHCM]
+				</td>
+			 	<!--
+				<td width="25%" height="100" >				
+					<div style="color:#555;padding-top:40px;text-align:center;">
+						LH Quảng Cáo<br>
+						094.2727.225
+					</div>
+				</td>
+				-->
+			  </tr>
+			</table>
+		<!-- ket thuc quang cao-->	
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow1">
+				<div class="bcar_code">Mã tin:<br> MX-019832
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Mua xe 8 chồ Inova &nbsp;&nbsp;<font style="font-size:13">[200-400 Triệu]</font></span>
+				Công ty tôi cân mua xe Inova xe gia dinh đời 2007 trờ lên giá 300 đên 350 trieu cam on anh chi đă đọc tin. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Buu Thang- ĐT:0935604989-0935604989.<br>
+					Địa chỉ:  dien bien phu da nang Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 07/04/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow2">
+				<div class="bcar_code">Mã tin:<br> MX-018535
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Cần mua gấp xe ưu tiên xe gia đình &nbsp;&nbsp;<font style="font-size:13">[400-600 Triệu]</font></span>
+				Cần mua xe toyota 4 chỗ,7 chỗ..Ưu tiên xe chính chủ. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Tran Nhat Son- ĐT:0945024871.<br>
+					Địa chỉ:  87 Ông Ích Khiêm Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 30/03/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow1">
+				<div class="bcar_code">Mã tin:<br> MX-015531
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Tìm mua xe đã qua sử dụng giá dưới 500t &nbsp;&nbsp;<font style="font-size:13">[400-600 Triệu]</font></span>
+				Tôi đang cần tìm mua một chiếc xe ford everest 7 chổ đời 2008, 2009 hoặc Nissan X trial 2007  để đi lại. Anh chị em nào có xe, hoặc người quen giới thiệu giúp. Xin cảm ơn, tôi ở Đà Nẵng. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Lê ngọc Chương- ĐT:0913473992.<br>
+					Địa chỉ:  Cẩm lệ Đà nẵng Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 14/03/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow2">
+				<div class="bcar_code">Mã tin:<br> MX-015081
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">cần mua xe Ford Transit hoac Mes Srinter &nbsp;&nbsp;<font style="font-size:13">[400-600 Triệu]</font></span>
+				Cần mua xe củ dòng xe 16  chổ Ford Transit hoac mer SPrinter năm 2009 trở lên, giá phải chăn, xe chính chủ càng tốt Ưu tiên cho xe chạy dịch vụ du lịch.. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Nguyễn Đăng Duy Thông- ĐT:0917549558-0917898940.<br>
+					Địa chỉ:  k18/9 Phan Kế Bính - Q. Hải Châu - Tp.đà Nẵng Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 05/03/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow1">
+				<div class="bcar_code">Mã tin:<br> MX-015071
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Tìm mua xe đã qua sử dụng &nbsp;&nbsp;<font style="font-size:13">[400-600 Triệu]</font></span>
+				Tôi đang cần tìm mua một chiếc xe Hiệu Nissan Tiida, đời 2007 hoặc 2008 nhập khẩu của NHẬT BẢN số tự động để đi lại.
+Anh chị em nào có xe, hoặc người quen giới thiệu giúp. Xin cảm ơn, tôi ở Đà . 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Hoàng Tam Kỳ- ĐT:0913459669-05113892641.<br>
+					Địa chỉ:  417 Hai Phong Da Nang Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 05/03/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow2">
+				<div class="bcar_code">Mã tin:<br> MX-015013
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Tim mua xe oto Toyota Yaris đã qua sử dụng. &nbsp;&nbsp;<font style="font-size:13">[400-600 Triệu]</font></span>
+				Cần mua xe otô Toyota Yaris (xe đã dùng) màu trắng, hoặc màu phấn hồng đời xe 2010- 2011. Mọi thông tin xin liên hệ lại .. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Nguyễn Minh Thông- ĐT:0913466173-0988019009.<br>
+					Địa chỉ:  272 Thang Long - P. Hòa Cường Nam - Hải Châu Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 03/03/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow1">
+				<div class="bcar_code">Mã tin:<br> MX-014897
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Cần mua xe Giá trị hơn 1 tỷ đồng &nbsp;&nbsp;<font style="font-size:13">[1 Tỉ]</font></span>
+				Mua 1 chiếc xe venza đời 2009 để sử dụng cho gia đình màu trắng hay màu đồng. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Hồ dắc Long- ĐT:0904120158-0904120158.<br>
+					Địa chỉ:  53/9 duong 2/9 Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 01/03/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow2">
+				<div class="bcar_code">Mã tin:<br> MX-014890
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Tôi cần mua một chiếc xe oto đi cho gia đình &nbsp;&nbsp;<font style="font-size:13">[200-400 Triệu]</font></span>
+				- Tôi cần mua 1 chiếc xe oto hãng TOYOTA .
+- Đời xe sản xuất trong khoảng từ năm 2008 đến năm 2010.
+- Loại xe ATIS 1,8L ; INOVA 1.8L; VIOS 1,6L......
+- Xe chưa sửa chữa, xe đăng ký của cá nhân.
+-. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Phạm Văn Thuận- ĐT:0905256943.<br>
+					Địa chỉ:  96 Thủ Khoa Huân Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 01/03/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow1">
+				<div class="bcar_code">Mã tin:<br> MX-014510
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Cần mua honda civic 2009 2.0 - form đèn lục giác &nbsp;&nbsp;<font style="font-size:13">[400-600 Triệu]</font></span>
+				Như tiêu đề. Mình cần mua 1 chiếc xe cho gia đình sử dụng, mua xe ở đà nẵng hoặc sài gòn đều đuợc. Ai có xe xin vui lòng alo, cảm ơn đã xem tin.. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Phạm Bảo Sơn- ĐT:01279131555.<br>
+					Địa chỉ:  06 đống đa Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 25/02/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow2">
+				<div class="bcar_code">Mã tin:<br> MX-013622
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Cần mua xe sử dụng gia đình &nbsp;&nbsp;<font style="font-size:13">[200-400 Triệu]</font></span>
+				Tôi  cần tìm mua xe Mazda3 đời 03-04 hoặc Toyota Corolla Altis Đời 03-04  số tự động là ưu tiên,số tiền vào khoảng gần 400tr.rất mong cộng đồng bonbanh.com giúp đỡ vì lần đầu mua xe otô.. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Dặng Văn Quyết- ĐT:0938416338-05113537573.<br>
+					Địa chỉ:  đà nẵng Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 02/02/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow1">
+				<div class="bcar_code">Mã tin:<br> MX-013614
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Mua otô cũ các loại như Altis, Inova, Mitsubisi Grandis &nbsp;&nbsp;<font style="font-size:13">[400-600 Triệu]</font></span>
+				Tôi Nguyễn hữu Sia, cần mua các loại xe  số tự động Altis, Inova, Camry, Mitsubisi Grandis đời từ 2009 đến nay. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Nguyen huu Sia- ĐT:0903503484-05113822512.<br>
+					Địa chỉ:  26 bach dang tp da nang Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 29/01/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow2">
+				<div class="bcar_code">Mã tin:<br> MX-012592
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">cần mua ô tô cũ (kể cả xe thế chấp ngân hàng) &nbsp;&nbsp;<font style="font-size:13">[400-600 Triệu]</font></span>
+				Tôi có nhu cầu mua lại các loại xe ô tô từ 5-7 chỗ (nguồn gốc rõ ràng) (  kể cả xe đang thế chấp ngân hàng) với giá cao để đi lại. Có hoa hồng cho người giới thiệu. cảm ơn đã đọc tin.. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Mr Tuan- ĐT:0983877552.<br>
+					Địa chỉ:  Quang Nam Da Nang Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 02/01/2014</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow1">
+				<div class="bcar_code">Mã tin:<br> MX-011894
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Salon Anh Kiệt cần thu mua xe từ 4 đến 7 chỗ giá cao &nbsp;&nbsp;<font style="font-size:13">[600-800 Triệu]</font></span>
+				Đên tận nhà thu mua oto giá cao cho nhưng dòng xe toyota Vios G, Altis G Innova G,Zace Gl va những dong xe Mitshubishi       Jolies,Grandis,Chevrolet và tất cả dòng xe Honda.kể cả xe đang thế chấp ngân hàng. Giá mua cạnh tran. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Tran Nhat Son- ĐT:0938940136.<br>
+					Địa chỉ:  96 Phạm Văn Nghị Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 17/12/2013</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow2">
+				<div class="bcar_code">Mã tin:<br> MX-011893
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">Cần mua xe 4 chỗ sử dụng gia đình &nbsp;&nbsp;<font style="font-size:13">[200-400 Triệu]</font></span>
+				Cần mua xe 4 chỗ, giá tầm dưới 300, để sử dung gia đình.. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Thân trọng Hà- ĐT:0905060262.<br>
+					Địa chỉ:  Tổ 24, Thanh Bình, Đà nẵng Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 09/12/2013</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+															<!-- begin buy car item 1-->
+			<div class="buy_car_item bcrow1">
+				<div class="bcar_code">Mã tin:<br> MX-011656
+</div>
+				<div class="bcar_content">
+				<span class="bcar_title">cần mua xe bảy chỗ innova doi  2007 G &nbsp;&nbsp;<font style="font-size:13">[200-400 Triệu]</font></span>
+				cân mua xe như trên tư nhân  chính chủ ko phải xe taxi dọn lại ai có xe bán lien hệ giúp    số lien lạc chính    ̣̣̣̣̣̣ KHÔNG MỘT HAI   KHÔNG TÁM KHÔNG SÁU , SÁU TÁM TÁM TÁM. 
+			
+				</div>
+				<div class="bcar_contact">
+					<b>Liên hệ</b>: Trần Kim Triệu- ĐT:0902375464.<br>
+					Địa chỉ:  Đà Nẵng Đà  Nẵng
+				</div>
+				<div class="bcar_city">
+					Đà  Nẵng
+					<br><br>
+					<span style="font-weight:normal;color:#666;font-style:italic">Ngày: 29/11/2013</span>
+					
+				</div>
+			</div>
+			<!-- end buy car item 1-->
+					
+			
+			<div class="pagging">
+			<div class="cpage">Trang 4 / 5 </div>
+			
+			<div class="navpage">
+				<div class="navpage"> <a class='first' href='../index.html'><<</a><a href='../page%2c3/index.html'>&nbsp;<&nbsp;</a><a href='../page%2c1/index.html'>1</a><a href='../page%2c2/index.html'>2</a><a href='../page%2c3/index.html'>3</a><span class='pactive'>4</span><a href='../page%2c5/index.html'>5</a><a href='../page%2c5/index.html'>&nbsp;>&nbsp;</a><a href='../page%2c5/index.html'>>></a></div>	
+			</div>
+			<div style="float:right;margin:5px 10px 0px 0px;;">Tổng số : <b>73</b> tin</div>
+		
+			</div>
+	
+</div>			
+	</div>
+
+<div id="footer">
+	<div class="l-footer"></div>
+	<div class="c-footer">
+		<div class="f-menu">
+			<a href="../../index.html" class="f-link" title="oto, mua ban oto">Trang chủ</a> <span>|</span>
+			<a href="../../quy-che-hoat-dong/index.html#dangtin" class="f-link">Quy định đăng tin</a> <span>|</span>
+			<a href="../../quy-che-hoat-dong/index.html" class="f-link">Quy chế hoạt động</a> <span>|</span>
+			<a href="../../sms/index.html" class="f-link">Dịch vụ tiện ích SMS</a> <span>|</span>
+			<a href="../../gioi-thieu/index.html" class="f-link">Trợ giúp</a> <span>|</span>
+			<a href="../../lien-he/index.html" class="f-link">Liên hệ</a> 
+		</div>
+		<div class="f-copyright">
+		<div style="float: left; width: 845px;">
+		Xem tốt nhất trên trình duyệt <a rel="nofollow"  class="f-copyright" target="_blank" href="http://www.mozilla.com/vi/" title="Tải Mozilla FireFox phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Mozilla FireFox</b></a> , <a rel="nofollow"  class="f-copyright"  target="_blank" href="http://www.google.com/chrome?hl=vi" title="Tải Google Chrome phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Google Chrome</b></a> hoặc <b>IE 7</b> trở lên với độ phân giải từ 1024x768 trở lên.<br>
+		Điện thoại: 04-2215 2215 / 04-2215 2246 . Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script>. <span style="">Hotline: <script>document.write("094"+" 2727"+" 225");</script></span><br>
+		<span style="color:red">Bonbanh không bán xe trực tiếp, quý khách mua xe vui lòng liên hệ trực tiếp người đăng tin.<br></span>
+		Copyright © 2006-2015 <a href="../../index.html" title="oto, mua ban oto, oto nhap khau">Bonbanh.com</a> - <b style="font-weigth:bold">Công ty cổ phần Kypernet Việt Nam.</b> Mã số doanh nghiệp: 0101833960
+		</div>
+		<div style="float: right; width: 102px;margin-top:3px">
+		<a rel="nofollow"  href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=8610" target="_blank"><img src="../../img/bct.gif" title="Bonbanh.com đã đăng ký với Bộ Công Thương" alt=""></a>
+		</div>
+		
+		
+		</div>
+		
+	</div>
+	<div class="r-footer"></div>
+</div>
+<div id="cookie_content" style="display:none">
+<div style="margin-bottom:3px;background:#FFFFE5;border: 1px solid #FFB64B;padding:5px 20px 5px 20px;">
+<div style="color:red">
+<img src='../../img/reg_i.gif'> <b>Thông báo:</b> Trình duyệt của bạn không hỗ trợ <b>Cookie</b> hoặc đang tắt <b>Cookie</b>. Để chạy được các chức năng trên bonbanh.com trình duyệt của bạn cần phải bật <b>Cookie</b> !
+</div>
+<div style="text-align:center;color:#666;padding-top:5px;">
+Nếu trình duyệt của bạn tắt cookie bạn có thể bật lại cookie theo hướng dẫn sau đây : <a href="../../bat-cookie/index.html">Bật Cookie trình duyệt</a>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="../../js/ck.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1138176-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="abblock">
+    
+<!-- Begin Adbrand -->
+<script language="javascript" type="text/javascript">
+    var adbrand_zoneId = 'va_69E92C1B41314EB7';
+    var adbrand_width  = '250';
+    var adbrand_height = '250';
+    var adbrand_sizeId = '12';
+    var adbrand_typeId = '2'; 
+</script>
+<script type="text/javascript" src="../../../embed.adbrand.net/adbrand.js"></script>
+<!-- End: Adbrand -->
+
+
+</div>
+
+</div>
+</body>
+
+<!-- Mirrored from www.bonbanh.com/tin-mua-xe/page,4/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:39:20 GMT -->
+</html>
+<!--t : tdb:0.00033307075500488/t3:0.00022196769714355/t4:0.20274901390076/0.20342898368835  -->

@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+
+<!-- Mirrored from www.bonbanh.com/bat-cookie/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:37:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bật Cookie trình duyệt</title>
+<base />
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../css/register.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="../img/favico.ico"  type="image/x-icon"/>
+
+
+
+<script type="text/javascript" src="../js/js_minified1b3b.js?v=63"></script>
+
+
+</head>
+<body >
+<style>
+
+p,li
+{
+	font-size:13px;
+	line-height:20px;
+}
+ol
+{
+	margin-left:20px;
+}
+h3
+{
+	margin-top:20px;
+	
+}
+a.zippy-with-subtext {
+text-decoration: none;
+}
+a.zippy-with-subtext span {
+text-decoration: underline;
+}
+a.expand{
+background: url(../img/zippy_minus_sm.gif) no-repeat 0 0;
+padding-left: 20px;
+}
+a.collapse{
+background: url(../img/zippy_plus_sm.gif) no-repeat 0 0;
+padding-left: 20px;
+}
+
+</style>
+<div id="wrapper">
+<div id="header">
+<style>
+
+
+
+</style>
+<a id="logo"  href="../index.html" title="oto, mua ban oto"  ><h1>oto, mua ban oto</h1>
+</a>
+
+
+<div id="top-nav" style="*width:325px">
+	<ul>		
+		<li><a href="../dang-ky-thanh-vien/index.html">Đăng ký</a></li>
+		<li><a href="../thanh-vien/index.html" onclick="open_dialog('login-dlg','username1');return false;">Đăng nhập</a></li>
+		<li><a href="../gioi-thieu/index.html">Hướng dẫn</a></li>		
+		<li class="ilast"><a href="../lien-he/index.html">Liên hệ</a></li>
+</ul>		
+	<img src="../img/pixel.gif" class="img-top-nav-right"/>
+	
+</div>		
+
+
+
+<div id="nav-bar">
+	<a class="menu-item" href="../index.html" title="oto, mua ban oto">Trang chủ</a>
+	<a class="menu-item" href="../oto/index.html" title="Tìm mua ô tô">Tìm mua ô tô</a>
+	<a class="menu-item" href="../salon-oto/index.html">Salon Ôtô</a>
+	<a class="menu-item" href="../dang-tin-ban-xe/index.html" title="Bán ô tô">Bán ô tô</a>
+	<a class="menu-item" href="../tin-mua-xe/index.html" title="Các tin mua xe">Cần mua ?</a>
+		
+	<a class="menu-item" href="../my-bonbanh/index.html" title="Quản lý tin đăng của bạn...">My BonBanh</a>
+		</div>
+</div>
+<div id="cookie_alert" ></div>
+<div id="alert_content" ></div>
+	<!-- begin login diaglog-->
+		<div  id="login-dlg" style="display:none" class="dlg-box">
+		<div class="shadow">
+		<span class="close-btn"><a href="#" onclick="return close_dialog('login-dlg');">x</a></span>
+		<div id="login-frm">
+		<form  action="#" method="post">
+			<span class="input-label">Tên truy cập</span><span class="input-text"><input name="username1" id="username1" type="text" ></span>
+			<span class="input-label">Mật khẩu</span><span class="input-text"><input type="password" id="pass1" name="pass1"></span>
+			<div class="input-btn">
+			<input type="submit" name="login_btn" value="Đăng nhập" class="login_btn" onclick="return login_submit1();"/>
+			<a href="../quen-mat-khau/index.html">Quên mật khẩu ?</a>
+			</div>
+			<div style="float: left;width:260px;padding-left:20px;color:#666">Tên truy cập có thể là: tên truy cập/email/mobile tương ứng với tài khoản của bạn</div>
+			<div id="login_processing" ><img src="../img/processing.gif"></div>
+			
+		</form>
+		</div>
+		</div>
+		</div>
+	<!-- end login diaglog-->
+	
+<script>
+
+function login_submit1()
+{
+	$("#login_processing").show();
+	//$("#login_msg").hide();
+	var ct = new Date();
+	strURL='process_login/?T='+ct.getTime();
+	$.post(strURL, {username: $("#username1").val(),pass: $("#pass1").val()}, function(data){
+				if(data.length >0) {
+					
+					if(data=="OK")
+					{						
+						location.reload(true);
+
+					}else if(data=="OK1")
+					{
+						window.location="../my-bonbanh/index.html";
+					}else if(data=="NotExist")
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: Tên truy cập không có trong hệ thống!");
+					}else
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: mật khẩu không đúng hãy thử lại!");
+					}
+					
+				}else
+				{
+					$("#login_processing").hide();
+					alert("Lỗi đăng nhập: tên truy câp/mật khẩu không đúng hãy thử lại!");
+				}
+			});
+	return false;
+}
+
+</script><div class="breadcrum"><a href="../index.html">Trang chủ</a> &raquo; Bật Cookie trình duyệt</div>
+<div class="register" style="height:auto;">
+	
+<div style="margin-left:10px;">
+
+
+<div id="article-content-div" >
+<br>
+<p>Nếu bạn nhận được thông báo từ Bonbanh : trình duyệt của bạn không hỗ trợ hoặc tắt Cookie. Bạn có thể làm theo hướng dẫn sau đây để bật tính năng Cookie của trình duyệt.</p>
+<h3><a href="javascript:toggleZippy('z_ie');toggleLayerDefault('kb_ie')" id="z_ie" class="collapse">Trình duyệt của bạn là : Microsoft Internet Explorer</a></h3>
+
+<div class="zippy_content" id="kb_ie" style="display: none;">
+<p>Để bật Cookie cho trình duyệt Internet Explorer 6,7 hoặc 8: </p>
+<ol>
+<li>Click chuột mục <strong>Tools</strong> &gt; <strong>Internet Options</strong> trong menu (thực đơn ) trình duyệt của bạn.</li>
+<li>Click chuột vào tab <strong>Privacy</strong>.</li>
+<li>Click chuột vào nút <strong>Advanced</strong>. </li>
+<li>Chọn  'Override automatic cookie handling' dưới phần 'Cookies' trong cửa sổ <strong>Advanced Privacy Settings</strong>.</li>
+<li>Chọn mục 'Accept' hoặc 'Prompt' dưới phần 'First-party Cookies.'</li>
+<li>Chọn mục 'Accept' hoặc 'Prompt' dưới 'Third-party Cookies.' (Chú ý: nếu bạn chọn 'Prompt' bạn sẽ được hỏi có chấp nhận Cookie hay không mỗi khi website gửi Cookie tới trình duyệt.) </li>
+<li>Click <strong>OK</strong> để đồng ý và đóng cửa sổ <strong>Advanced Privacy Settings</strong>.</li>
+<li>Click <strong>OK</strong> tiếp để lưu và đóng cửa sổ 'Internet Options'.</li>
+</ol>
+
+</div>
+<h3><a href="javascript:toggleZippy('z_ff');toggleLayerDefault('kb_ff')" id="z_ff" class="collapse">Trình duyệt của bạn là : Mozilla Firefox</a></h3>
+
+<div class="zippy_content" id="kb_ff" style="display: block;">
+<p>Để bật Cookie cho trình duyệt Mozilla Firefox 2.x và 3.x (Máy Windows):</p>
+<ol>
+<li>Click <strong>Tools &gt; Options</strong> trong menu (thực đơn ) trình duyệt Mozilla Firefox của bạn.</li>
+<li>Click vào  tab <strong>Privacy</strong> .</li>
+<li>Thiết lập cho mục 'Firefox will': giá trị <strong>Use custom settings for history</strong>.</li>
+<li>Chọn ( đánh dấu) check box  <strong>Accept cookies from sites</strong> để bật cookie</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+
+<p>Để bật Cookie cho trình duyệt Mozilla Firefox (Máy Mac):</p>
+<ol>
+<li>Click vào mục <strong>Firefox</strong> trong menu ( thực đơn) trình duyệt Mozilla Firefox của bạn.</li>
+<li>Chọn <strong>Preferences</strong>.</li>
+<li>Rồi chọn <strong>Privacy</strong>.</li>
+<li>Thiết lập  'Firefox will': giá trị <strong>Use custom settings for history</strong>. </li>
+<li>Chọn ( đánh dấu) check box  <strong>Accept cookies from sites</strong> để bật cookie</li>
+<li>Click <strong>OK</strong>.
+</li></ol>
+</div>
+<h3><a href="javascript:toggleZippy('z_chrome');toggleLayerDefault('kb_chrome')" id="z_chrome" class="collapse">Trình duyệt của bạn là : Google Chrome</a></h3>
+<div class="zippy_content" id="kb_chrome" style="display: none;">
+<p>Để bật Cookie cho trình duyệt Chrome (Máy Windows):</p>
+<ol>
+<li>Click vào biểu tượng hình 'Cà lê' trên thanh công cụ.</li>
+<li>Khi xuất hiện menu sổ xuống chọn mục <strong>Options</strong>.</li>
+<li>Chọn tab <strong>Under the Hood</strong>.</li>
+<li>Click vào <strong>Content settings</strong> dưới mục 'Privacy'.</li>
+<li>Đảm bảo mục <strong>Allow local data to be set</strong> đang được lựa chọn để cho phép các website gửi Cookie tới trình duyệt.</li>
+</ol>
+<p>Để bật Cookie cho trình duyệt Chrome (Máy Mac):</p>
+<ol>
+<li>Chọn <strong>Chrome &gt; Preferences</strong> trên thanh thực đơn.</li>
+<li>Click tab <strong>Under the Hood</strong> .</li>
+<li>Click  vào <strong>Content settings</strong> dưới mục 'Privacy'.</li>
+<li>Đảm bảo mục <strong>Allow local data to be set</strong> đang được lựa chọn để cho phép các website gửi Cookie tới trình duyệt.</li>
+</ol>
+</div>
+<h3><a href="javascript:toggleZippy('z_safari');toggleLayerDefault('kb_safari')" id="z_safari" class="collapse">Trình duyệt của bạn là : Safari</a></h3>
+<div class="zippy_content" id="kb_safari" style="display: none;">
+<p>Để bật Cookie cho trình duyệt Safari: </p>
+<ol>
+<li>Go to the <strong>Safari</strong> drop-down menu.</li>
+<li>Select <strong>Preferences</strong>.</li>
+<li>Click <strong>Security</strong> in the top panel.</li>
+<li>Under 'Accept Cookies' select the option 'Only from sites you navigate to.'</li>
+</ol>
+</div>
+<h3><a href="javascript:toggleZippy('z_opera');toggleLayerDefault('kb_opera')" id="z_opera" class="collapse">Trình duyệt của bạn là : Opera</a></h3>
+<div class="zippy_content" id="kb_opera" style="display: none;">
+<p>Để bật Cookie cho trình duyệt Opera: </p>
+<ol>
+<li>Click vào mục <strong>Tools</strong> trong menu (thực đơn ) trình  <strong>Opera</strong>.</li>
+<li>Click vào <strong>Preferences</strong>.</li>
+<li>Click vào mục <strong>Privacy</strong> gần phía dưới bên trái màn hình.</li>
+<li>Chọn (đánh dấu)  <strong>Enable cookies</strong> và chọn <strong>Accept all cookies</strong> trong mục  "Normal cookies" .'</li>
+<li>Lưu cấu hình bằng cách click <strong>Ok</strong>.</li>
+</ol>
+</div>
+<script type="text/javascript">
+
+hideLayer('kb_ie');
+hideLayer('kb_ff');
+hideLayer('kb_safari');
+hideLayer('kb_chrome');
+hideLayer('kb_opera');
+</script>
+<p>Nếu bạn đã thực hiện các thao tác cấu hình như hướng dẫn trên mà Bonbanh vẫn thông báo trình duyệt không hỗ trợ Cookie hoặc đang tắt Cookie, bạn hãy thử đóng toàn bộ trình duyệt và mở lại.
+</p>
+
+<script type="text/javascript">
+var BrowserDetect = {
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+		this.version = this.searchVersion(navigator.userAgent)
+			|| this.searchVersion(navigator.appVersion)
+			|| "an unknown version";
+		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+	},
+	searchString: function (data) {
+		for (var i=0;i<data.length;i++)	{
+			var dataString = data[i].string;
+			var dataProp = data[i].prop;
+			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			if (dataString) {
+				if (dataString.indexOf(data[i].subString) != -1)
+					return data[i].identity;
+			}
+			else if (dataProp)
+				return data[i].identity;
+		}
+	},
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index == -1) return;
+		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	},
+	dataBrowser: [
+		{
+			string: navigator.userAgent,
+			subString: "Chrome",
+			identity: "Chrome"
+		},
+		{ 	string: navigator.userAgent,
+			subString: "OmniWeb",
+			versionSearch: "OmniWeb/",
+			identity: "OmniWeb"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Apple",
+			identity: "Safari",
+			versionSearch: "Version"
+		},
+		{
+			prop: window.opera,
+			identity: "Opera"
+		},
+		{
+			string: navigator.vendor,
+			subString: "iCab",
+			identity: "iCab"
+		},
+		{
+			string: navigator.vendor,
+			subString: "KDE",
+			identity: "Konqueror"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Firefox",
+			identity: "Firefox"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Camino",
+			identity: "Camino"
+		},
+		{		// for newer Netscapes (6+)
+			string: navigator.userAgent,
+			subString: "Netscape",
+			identity: "Netscape"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "MSIE",
+			identity: "Explorer",
+			versionSearch: "MSIE"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Gecko",
+			identity: "Mozilla",
+			versionSearch: "rv"
+		},
+		{ 		// for older Netscapes (4-)
+			string: navigator.userAgent,
+			subString: "Mozilla",
+			identity: "Netscape",
+			versionSearch: "Mozilla"
+		}
+	],
+	dataOS : [
+		{
+			string: navigator.platform,
+			subString: "Win",
+			identity: "Windows"
+		},
+		{
+			string: navigator.platform,
+			subString: "Mac",
+			identity: "Mac"
+		},
+		{
+			   string: navigator.userAgent,
+			   subString: "iPhone",
+			   identity: "iPhone/iPod"
+	    },
+		{
+			string: navigator.platform,
+			subString: "Linux",
+			identity: "Linux"
+		}
+	]
+
+};
+BrowserDetect.init();
+
+//alert(BrowserDetect.browser);
+if(BrowserDetect.browser=="Firefox")
+{
+	toggleZippy('z_ff');toggleLayerDefault('kb_ff');
+}else if(BrowserDetect.browser=="Chrome")
+{
+	toggleZippy('z_chrome');toggleLayerDefault('kb_chrome');
+	
+}else if(BrowserDetect.browser=="Opera")
+{
+	toggleZippy('z_opera');toggleLayerDefault('kb_opera');
+	
+}else if(BrowserDetect.browser=="Safari")
+{
+	toggleZippy('z_safari');toggleLayerDefault('kb_safari');
+	
+}else if(BrowserDetect.browser=="Explorer")
+{
+	toggleZippy('z_ie');toggleLayerDefault('kb_ie');
+	
+}
+
+</script>
+</div>
+
+
+</div>
+</div>
+<div id="footer">
+	<div class="l-footer"></div>
+	<div class="c-footer">
+		<div class="f-menu">
+			<a href="../index.html" class="f-link" title="oto, mua ban oto, oto nhap khau">Trang chủ</a> <span>|</span>
+			<a href="../quy-dinh/index.html#dangtin" class="f-link">Quy định đăng tin</a> <span>|</span>
+			<a href="../quy-dinh/index.html#thanhvien" class="f-link">Quy chế thành viên</a> <span>|</span>
+			<a href="../gioi-thieu/index.html" class="f-link">Trợ giúp</a> <span>|</span>
+			<a href="../lien-he/index.html" class="f-link">Liên hệ</a> 
+		</div>
+		<div class="f-copyright">
+		Xem tốt nhất trên trình duyệt <a rel="nofollow"  class="f-copyright" target="_blank" href="http://www.mozilla.com/vi/" title="Tải Mozilla FireFox phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Mozilla FireFox</b></a> , <a rel="nofollow"  class="f-copyright"  target="_blank" href="http://www.google.com/chrome?hl=vi" title="Tải Google Chrome phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Google Chrome</b></a> hoặc <b>IE 7</b> trở lên với độ phân giải từ 1024x768 trở lên.<br>
+		Điện thoại: 04-2215 2215 / 04-2215 2246 . Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script><br>
+		Copyright Notice © 2006-2010 <a href="../index.html" title="oto, mua ban oto, oto nhap khau">Bonbanh.com</a> .All rights reserved.
+		</div>
+		
+	</div>
+	<div class="r-footer"></div>
+</div>
+
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1138176-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</div>
+</body>
+
+<!-- Mirrored from www.bonbanh.com/bat-cookie/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:37:31 GMT -->
+</html><!--t : tdb:0.00034904479980469/t3:0.00023889541625977/t4:0.00048398971557617/0.0012309551239014  -->

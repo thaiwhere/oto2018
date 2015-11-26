@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+
+<!-- Mirrored from www.bonbanh.com/gioi-thieu/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 00:21:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Giới thiệu về bonbanh.com</title>
+<base />
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="../img/favico.ico"  type="image/x-icon"/>
+
+
+
+<script type="text/javascript" src="../js/jquery-1.3.2.min.js" ></script>
+<script language="javascript" src="../js/lib3.js"></script>  
+
+</head>
+<body >
+
+<div id="wrapper">
+<div id="header">
+<style>
+
+
+
+</style>
+<a id="logo"  href="../index.html" title="oto, mua ban oto"  ><h1>oto, mua ban oto</h1>
+</a>
+
+
+<div id="top-nav" style="*width:325px">
+	<ul>		
+		<li><a href="../dang-ky-thanh-vien/index.html">Đăng ký</a></li>
+		<li><a href="../thanh-vien/index.html" onclick="open_dialog('login-dlg','username1');return false;">Đăng nhập</a></li>
+		<li><a href="index.html">Hướng dẫn</a></li>		
+		<li class="ilast"><a href="../lien-he/index.html">Liên hệ</a></li>
+</ul>		
+	<img src="../img/pixel.gif" class="img-top-nav-right"/>
+	
+</div>		
+
+
+
+<div id="nav-bar">
+	<a class="menu-item" href="../index.html" title="oto, mua ban oto">Trang chủ</a>
+	<a class="menu-item" href="../oto/index.html" title="Tìm mua ô tô">Tìm mua ô tô</a>
+	<a class="menu-item" href="../salon-oto/index.html">Salon Ôtô</a>
+	<a class="menu-item" href="../dang-tin-ban-xe/index.html" title="Bán ô tô">Bán ô tô</a>
+	<a class="menu-item" href="../tin-mua-xe/index.html" title="Các tin mua xe">Cần mua ?</a>
+		
+	<a class="menu-item" href="../my-bonbanh/index.html" title="Quản lý tin đăng của bạn...">My BonBanh</a>
+		</div>
+</div>
+<div id="cookie_alert" ></div>
+<div id="alert_content" ></div>
+	<!-- begin login diaglog-->
+		<div  id="login-dlg" style="display:none" class="dlg-box">
+		<div class="shadow">
+		<span class="close-btn"><a href="#" onclick="return close_dialog('login-dlg');">x</a></span>
+		<div id="login-frm">
+		<form  action="#" method="post">
+			<span class="input-label">Tên truy cập</span><span class="input-text"><input name="username1" id="username1" type="text" ></span>
+			<span class="input-label">Mật khẩu</span><span class="input-text"><input type="password" id="pass1" name="pass1"></span>
+			<div class="input-btn">
+			<input type="submit" name="login_btn" value="Đăng nhập" class="login_btn" onclick="return login_submit1();"/>
+			<a href="../quen-mat-khau/index.html">Quên mật khẩu ?</a>
+			</div>
+			<div style="float: left;width:260px;padding-left:20px;color:#666">Tên truy cập có thể là: tên truy cập/email/mobile tương ứng với tài khoản của bạn</div>
+			<div id="login_processing" ><img src="../img/processing.gif"></div>
+			
+		</form>
+		</div>
+		</div>
+		</div>
+	<!-- end login diaglog-->
+	
+<script>
+
+function login_submit1()
+{
+	$("#login_processing").show();
+	//$("#login_msg").hide();
+	var ct = new Date();
+	strURL='process_login/?T='+ct.getTime();
+	$.post(strURL, {username: $("#username1").val(),pass: $("#pass1").val()}, function(data){
+				if(data.length >0) {
+					
+					if(data=="OK")
+					{						
+						location.reload(true);
+
+					}else if(data=="OK1")
+					{
+						window.location="../my-bonbanh/index.html";
+					}else if(data=="NotExist")
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: Tên truy cập không có trong hệ thống!");
+					}else
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: mật khẩu không đúng hãy thử lại!");
+					}
+					
+				}else
+				{
+					$("#login_processing").hide();
+					alert("Lỗi đăng nhập: tên truy câp/mật khẩu không đúng hãy thử lại!");
+				}
+			});
+	return false;
+}
+
+</script><div class="breadcrum"><a href="../index.html">Trang chủ</a> &raquo; Giới thiệu bonbanh.com</div>
+<div class="register" style="height:auto;padding-top:50px;line-height:20px;">
+	 <div>
+                Được khởi đầu từ giữa năm 2006, BonBanh.com ra đời với mong muốn trở thành cầu nối
+                đưa những thông tin của người mua và người bán ô tô đến gần nhau hơn.<br />
+                <br />
+                Trải qua hơn 4 năm phát triển của mình, BonBanh.com đã nhận được rất nhiều những
+                ý kiến đóng góp và động viên của các bạn. Những điều đó là động lực cho chúng tôi
+                có thêm quyết tâm để phát triển phiên bản 2 của BonBanh - Driver Your Dreams.
+                <br />
+                <br />
+                <strong>
+                BonBanh - Driver Your Dreams</strong> là sự cam kết xây dựng: <i>“BonBanh.com là nơi chia
+                sẻ thông tin giữa người mua và người bán ô tô. Kết nối những đam mê đằng sau tay
+                lái giữa những người bạn.”</i>
+                <br />
+                <br />
+                Rất mong tiếp tục nhận được các ý kiến xây dựng của các bạn để BonBanh.com ngày
+                càng nâng cao chất lượng dịch vụ và mang lại thêm nhiều lợi ích cho người dùng.
+                <br />
+                Thân.
+            </div>
+           
+                <h2>
+                   <a name="link2" href="#" style="color:Black; text-decoration:none"> Làm thế nào để trở thành thành viên của BonBanh.com?</a></h2>
+                <div>
+                    Để trở thành thành viên của BonBanh này bạn vui lòng click vào link <a href="../dang-ky-thanh-vien/index.html">
+                        Đăng Ký</a>.
+                    <br />
+                    Nhập các thông tin bắt buộc phải có:
+                </div>
+                <div style="margin-left: 20px">
+                    <li>Tên truy cập: Viết liền không ký tự đặc biệt.</li>
+                    <li>Mật khẩu.</li>
+                    <li>Tên đầy đủ của bạn </li>
+                    <li>Email: Để nhận tin nhắn liên hệ của người bán. Địa chỉ Email của bạn sẽ được giữ
+                        kín không hiển thị. </li>
+                    <li>Mobile: Số điện thoại để liên lạc.</li>
+                    <li>Địa chỉ.</li>
+                    <li>Lưu ý: Địa chỉ <b><font color=red>Email - Số Mobile - Tên đăng nhập phải là duy nhất.</font></b> </li>
+                </div>
+                <div>
+                    <img src="../img/hdsd/dangky.jpg" />
+                </div>
+                <div>
+                    <h2>
+                        Đăng nhập vào hệ thống</h2>
+                    Để đăng nhập vào hệ thống: phần <b>Tên truy cập bạn</b> có thể nhập: <u>Số Điện Thoại</u>
+                    hoặc <u>Tên Truy Cập</u> hoặc <u>Email</u>  đã điền lúc đăng ký.
+                    <br />
+                    <br />
+                    <div style="margin-left: 20px">
+                        <img src="../img/hdsd/dangnhap2.jpg" />
+                    </div>
+                    Nếu bạn <b>Quên Mật khẩu</b>, ở vui lòng click vào link <a href="../quen-mat-khau/index.html">
+                        "Quên mật khẩu ?"</a>
+                    <br />
+                    Thông tin mật khẩu của bạn sẽ được gửi vào địa chỉ mail của bạn đã đăng ký.
+                    <br />
+                    <br />
+                    <div style="margin-left: 20px">
+                        <img src="../img/hdsd/quenmatkhau.jpg" />
+                    </div>
+                </div>
+                <div>
+                    <br />
+                    <h2>
+                        Sửa thông tin cá nhân</h2>
+                    Sau khi đăng nhập xong sẽ tự động truy cập đến trang MyBonBanh của bạn, vui lòng
+                    click vào Đổi thông tin cá nhân để thay đổi thông tin.
+                    <br />
+                    Việc sửa này sẽ được <b>kiểm duyệt </b>thường từ 10 phút đến 1 h nhằm hạn chế những trường hợp đưa tin không đúng. <br />Vì vậy rất mong bạn nên vui lòng kiểm tra chính xác thông
+                    tin khi ấn nút đăng ký.
+                    <br />
+                    <br />
+                    <div style="margin-left: 40px">
+                        <img src="../img/hdsd/thaydoi.jpg" />
+                    </div>
+                    <br />
+                </div>
+                <div>
+                    <br />
+                    <h2>
+                         <a name="link3" href="#" style="color:Black; text-decoration:none">Làm thế nào để đăng tin bán xe trên BonBanh.com?</a></h2>
+                    Để đăng tin ở BonBanh bạn bắt buộc phải là thành viên. Nếu chưa rõ bạn có thể xem
+                    lại hướng dẫn <b><a href="#link2">Làm thế nào đăng ký là thành viên của BonBanh.com</a></b>
+                    Tin bán xe của bạn sẽ được <b>hiển thị sau khi kiểm duyệt.</b>
+                    <br />
+                    Sau khi đăng nhập hệ thống, click vào nút bán ô tô để đăng tin bán xe.
+                    <br /><br />
+                    <div style="margin-left: 40px">
+                        <img src="../img/hdsd/banxe.jpg" />
+                    </div>
+                    Nhập đầy đủ các thông tin cần thiết phía trên, nếu tin của bạn có ảnh. Hãy
+                    <div style="margin-left: 20px">
+                        <li>1.Click vào chọn ảnh ở máy bạn</li>
+                        <li>2.Click vào gửi ảnh lên server</li>
+                        <li>3.Ảnh đầu tiên là ảnh sẽ hiển thị trên trang chủ. Bạn có thể kéo ảnh để di chuyển
+                            vị trí
+                        <br />
+                        <div style="margin-left: 40px">
+                            <img src="../img/hdsd/guianh.jpg" />
+                        </div>
+                        <br />
+                        
+                    </li>
+                        
+                    </div>
+                </div>
+                 <div>
+                    <br />
+                    <h2>
+                        <a name="link4" href="#" style="color:Black; text-decoration:none"> Làm thế nào để tìm chiếc xe phù hợp nhất cho bạn? </a></h2>
+                       BonBanh hỗ trợ nhiều cơ chế tìm kiếm theo 
+                       <div style="margin-left: 40px">
+                            <li>Hãng xe</li> 
+                            <li>Tình trạng xe</li>
+                            <li>Xe có ảnh,Hay giới hạn giá.</li>
+                            
+                            <img src="../img/hdsd/timmua.jpg" />
+                        </div>
+                    <br />
+                    <br />                   
+                </div>
+				<div>
+                    <br />
+                    <h2>
+                        <a name="link6" href="#" style="color:Black; text-decoration:none"> Làm thế nào để co nhỏ (resize) kích thước ảnh trước khi đăng lên Bonbanh? </a></h2>
+					   Để có thể đăng ảnh lên <b>Bonbanh</b> thì các ảnh cần phải có kích thước chiều rộng chiều cao nằm trong khoảng trên dưới 1000px ví dụ : 800x600 hoặc 1024x768 . Thông thường các ảnh chụp bằng máy ảnh kỹ thuật số hiện nay đều cho ảnh có kích thước rất lớn thường có chiều rộng/ chiều cao ảnh > 2000px vd: 4320x3240 . Nếu sử dụng các ảnh này để đăng lên <b>Bonbanh</b> thì hệ thống sẽ không cho phép. Vì vậy bạn cần phải xử lý co nhỏ (resize) kích thước các ảnh này trước khi đăng lên <b>Bonbanh</b>. <br>
+                       Bạn có thể sử dụng nhiều công cụ xử lý ảnh để co nhỏ kích thước ảnh trước khi đăng lên <b>Bonbanh</b> ví dụ : <b>Paint, photoshop,...</b>. <b>Bonbanh</b> xin giới thiệu phần mềm chỉnh sửa kích thước ảnh đơn giản và hiệu quả : <a href='../download/ImageResizer.zip' title='Tải phần mềm Fast image resize về máy tính'>Fast Image Resizer</a> . Các bước thực hiện như sau:
+                       <div style="margin-left: 40px">
+                            <li>Tải phần mềm <b>Fast Image Resizer</b> về máy tính của bạn bằng việc <a href='../download/ImageResizer.zip' title='Tải phần mềm Fast image resize về máy tính'>click vào link này</a>.</li> 
+                            <li>Giải nén file <b>ImageResizer.zip</b> </li>
+                            <li>Chạy file <b>fastImageResizer.exe</b> trong thư mục đã giải nén</li>
+                            <li>Chọn kích thước ảnh sau khi xử lý : 1024x768 như hình dưới</li>
+                            <li>Chọn các ảnh cần chỉnh sửa rồi kéo thả vào phần 'Drop file here' rồi đợi cho chương trình xử lý xong .</li>
+                            <li>Các ảnh sau khi xử lý được lưu trong thư mục <font style="font-weight:bold;color:blue"> 'resized'</font> bên trong thư mục chứa các file ảnh gốc .</li>
+                              <li>Bạn sử dụng các ảnh đã được xử lý trong thư mục  <font style="font-weight:bold;color:blue"> 'resized'</font> này để đăng lên <b>Bonbanh</b>.</li>
+                            <img src="../img/hdsd/suaanh.gif" />
+                        </div>
+                    <br />
+                    <br />                   
+                </div>
+                <div>
+                    <br />
+                    <h2>
+                        <a name="link5" href="#" style="color:Black; text-decoration:none">Liên hệ với chúng tôi?</a></h2>
+                    Liên hệ với BonBanh.com:
+                       <div style="margin-left: 20px">
+                    <li>Nếu bạn có khó khăn trong việc đăng tin, xóa xe, quên mật khẩu truy cập.</li>
+                    <li>Hay có
+                    ý kiến đóng xây dựng website, vui lòng điền thông tin vào Form <a href="../lien-he/index.html">liên hệ </a>.</li>
+                    </div>
+                    Chúng tôi sẽ liên hệ với bạn trong thời gian nhanh nhất. 
+                    <br />
+                    <br />
+                    Thân ái !
+                </div>
+	
+</div>
+<div id="footer">
+	<div class="l-footer"></div>
+	<div class="c-footer">
+		<div class="f-menu">
+			<a href="../index.html" class="f-link" title="oto, mua ban oto">Trang chủ</a> <span>|</span>
+			<a href="../quy-che-hoat-dong/index.html#dangtin" class="f-link">Quy định đăng tin</a> <span>|</span>
+			<a href="../quy-che-hoat-dong/index.html" class="f-link">Quy chế hoạt động</a> <span>|</span>
+			<a href="../sms/index.html" class="f-link">Dịch vụ tiện ích SMS</a> <span>|</span>
+			<a href="index.html" class="f-link">Trợ giúp</a> <span>|</span>
+			<a href="../lien-he/index.html" class="f-link">Liên hệ</a> 
+		</div>
+		<div class="f-copyright">
+		<div style="float: left; width: 845px;">
+		Xem tốt nhất trên trình duyệt <a rel="nofollow"  class="f-copyright" target="_blank" href="http://www.mozilla.com/vi/" title="Tải Mozilla FireFox phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Mozilla FireFox</b></a> , <a rel="nofollow"  class="f-copyright"  target="_blank" href="http://www.google.com/chrome?hl=vi" title="Tải Google Chrome phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Google Chrome</b></a> hoặc <b>IE 7</b> trở lên với độ phân giải từ 1024x768 trở lên.<br>
+		Điện thoại: 04-2215 2215 / 04-2215 2246 . Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script>. <span style="">Hotline: <script>document.write("094"+" 2727"+" 225");</script></span><br>
+		<span style="color:red">Bonbanh không bán xe trực tiếp, quý khách mua xe vui lòng liên hệ trực tiếp người đăng tin.<br></span>
+		Copyright © 2006-2015 <a href="../index.html" title="oto, mua ban oto, oto nhap khau">Bonbanh.com</a> - <b style="font-weigth:bold">Công ty cổ phần Kypernet Việt Nam.</b> Mã số doanh nghiệp: 0101833960
+		</div>
+		<div style="float: right; width: 102px;margin-top:3px">
+		<a rel="nofollow"  href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=8610" target="_blank"><img src="../img/bct.gif" title="Bonbanh.com đã đăng ký với Bộ Công Thương" alt=""></a>
+		</div>
+		
+		
+		</div>
+		
+	</div>
+	<div class="r-footer"></div>
+</div>
+<div id="cookie_content" style="display:none">
+<div style="margin-bottom:3px;background:#FFFFE5;border: 1px solid #FFB64B;padding:5px 20px 5px 20px;">
+<div style="color:red">
+<img src='../img/reg_i.gif'> <b>Thông báo:</b> Trình duyệt của bạn không hỗ trợ <b>Cookie</b> hoặc đang tắt <b>Cookie</b>. Để chạy được các chức năng trên bonbanh.com trình duyệt của bạn cần phải bật <b>Cookie</b> !
+</div>
+<div style="text-align:center;color:#666;padding-top:5px;">
+Nếu trình duyệt của bạn tắt cookie bạn có thể bật lại cookie theo hướng dẫn sau đây : <a href="../bat-cookie/index.html">Bật Cookie trình duyệt</a>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="../js/ck.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1138176-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="abblock">
+    
+<!-- Begin Adbrand -->
+<script language="javascript" type="text/javascript">
+    var adbrand_zoneId = 'va_69E92C1B41314EB7';
+    var adbrand_width  = '250';
+    var adbrand_height = '250';
+    var adbrand_sizeId = '12';
+    var adbrand_typeId = '2'; 
+</script>
+<script type="text/javascript" src="../../embed.adbrand.net/adbrand.js"></script>
+<!-- End: Adbrand -->
+
+
+</div>
+
+</div>
+</body>
+
+<!-- Mirrored from www.bonbanh.com/gioi-thieu/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 00:21:21 GMT -->
+</html><!--t : tdb:0.00027704238891602/t3:0.00021100044250488/t4:0.00055599212646484/0.0011839866638184  -->

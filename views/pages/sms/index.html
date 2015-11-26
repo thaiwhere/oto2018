@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+
+<!-- Mirrored from www.bonbanh.com/sms/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:37:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dịch vụ SMS tại Bonbanh.com</title>
+<base />
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../css/register.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="../img/favico.ico"  type="image/x-icon"/>
+
+
+
+<script type="text/javascript" src="../js/jquery-1.3.2.min.js" ></script>
+<script language="javascript" src="../js/lib3.js"></script>  
+
+</head>
+<body >
+
+<div id="wrapper">
+<div id="header">
+<style>
+
+
+
+</style>
+<a id="logo"  href="../index.html" title="oto, mua ban oto"  ><h1>oto, mua ban oto</h1>
+</a>
+
+
+<div id="top-nav" style="*width:325px">
+	<ul>		
+		<li><a href="../dang-ky-thanh-vien/index.html">Đăng ký</a></li>
+		<li><a href="../thanh-vien/index.html" onclick="open_dialog('login-dlg','username1');return false;">Đăng nhập</a></li>
+		<li><a href="../gioi-thieu/index.html">Hướng dẫn</a></li>		
+		<li class="ilast"><a href="../lien-he/index.html">Liên hệ</a></li>
+</ul>		
+	<img src="../img/pixel.gif" class="img-top-nav-right"/>
+	
+</div>		
+
+
+
+<div id="nav-bar">
+	<a class="menu-item" href="../index.html" title="oto, mua ban oto">Trang chủ</a>
+	<a class="menu-item" href="../oto/index.html" title="Tìm mua ô tô">Tìm mua ô tô</a>
+	<a class="menu-item" href="../salon-oto/index.html">Salon Ôtô</a>
+	<a class="menu-item" href="../dang-tin-ban-xe/index.html" title="Bán ô tô">Bán ô tô</a>
+	<a class="menu-item" href="../tin-mua-xe/index.html" title="Các tin mua xe">Cần mua ?</a>
+		
+	<a class="menu-item" href="../my-bonbanh/index.html" title="Quản lý tin đăng của bạn...">My BonBanh</a>
+		</div>
+</div>
+<div id="cookie_alert" ></div>
+<div id="alert_content" ></div>
+	<!-- begin login diaglog-->
+		<div  id="login-dlg" style="display:none" class="dlg-box">
+		<div class="shadow">
+		<span class="close-btn"><a href="#" onclick="return close_dialog('login-dlg');">x</a></span>
+		<div id="login-frm">
+		<form  action="#" method="post">
+			<span class="input-label">Tên truy cập</span><span class="input-text"><input name="username1" id="username1" type="text" ></span>
+			<span class="input-label">Mật khẩu</span><span class="input-text"><input type="password" id="pass1" name="pass1"></span>
+			<div class="input-btn">
+			<input type="submit" name="login_btn" value="Đăng nhập" class="login_btn" onclick="return login_submit1();"/>
+			<a href="../quen-mat-khau/index.html">Quên mật khẩu ?</a>
+			</div>
+			<div style="float: left;width:260px;padding-left:20px;color:#666">Tên truy cập có thể là: tên truy cập/email/mobile tương ứng với tài khoản của bạn</div>
+			<div id="login_processing" ><img src="../img/processing.gif"></div>
+			
+		</form>
+		</div>
+		</div>
+		</div>
+	<!-- end login diaglog-->
+	
+<script>
+
+function login_submit1()
+{
+	$("#login_processing").show();
+	//$("#login_msg").hide();
+	var ct = new Date();
+	strURL='process_login/?T='+ct.getTime();
+	$.post(strURL, {username: $("#username1").val(),pass: $("#pass1").val()}, function(data){
+				if(data.length >0) {
+					
+					if(data=="OK")
+					{						
+						location.reload(true);
+
+					}else if(data=="OK1")
+					{
+						window.location="../my-bonbanh/index.html";
+					}else if(data=="NotExist")
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: Tên truy cập không có trong hệ thống!");
+					}else
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: mật khẩu không đúng hãy thử lại!");
+					}
+					
+				}else
+				{
+					$("#login_processing").hide();
+					alert("Lỗi đăng nhập: tên truy câp/mật khẩu không đúng hãy thử lại!");
+				}
+			});
+	return false;
+}
+
+</script><div class="breadcrum"><a href="../index.html">Trang chủ</a> &raquo; Hướng dẫn sử dụng dịch vụ SMS</div>
+<div class="register" style="height:auto;padding-top:20px;">
+	<div style="padding:5px 5px 5px 10px;line-height:18px;color:#555;font-style:italic;font-size:13px;">
+		Bonbanh.com cung cấp 1 số tiện ích sử dụng qua dịch vụ SMS. Bạn có thể tham khảo cách sử dụng như hướng dẫn sau đây. Nếu có gì chưa rõ bạn có thể liên hệ trực tiếp với chúng tôi qua điện thoại hoặc email.<br>
+		
+	</div>
+	<div style="padding:20px;line-height:18px;">
+	<table class="pkg_table" width="920" cellspacing="0" cellpadding="0" bordercolor="#c9c9c9" border="1" style="border-collapse: collapse;">
+		<tr class="pkg_tbl_header">
+			<td width=150>Chức năng dịch vụ</td>
+			<td width=230>Cú pháp nhắn tin</td>
+			<td width=90>Chi phí tin nhắn</td>
+			<td width=450>Mô tả</td>
+			
+		</tr>
+		
+		<tr>
+			<td class="pkg_title">Up tin (đẩy tin) lên đầu trang chủ</td>
+			<td><span class="sms_cp">BONBANH &nbsp;UP &nbsp;Mã_Tin</span><br> gửi đến <span class="sms_n">8385</span></td>
+			<td>3 000 đ/sms</td>
+			<td>
+			Dùng để làm mới tin (up tin ) lên đầu trang chủ Bonbanh cho 1 tin đã đăng trên Bonbanh.com.<br>
+			Ví dụ: Mã tin của bạn là <b>123456</b> thì cú pháp nhắn tin:<br><span class="sms_vd">BONBANH &nbsp;UP &nbsp;123456</span> gửi đến <span class="sms_n">8385</span>
+			</td>
+			
+		</tr>
+		<tr>
+			<td class="pkg_title">Đăng thêm tin xe</td>
+			<td><span class="sms_cp">BONBANH &nbsp;TX &nbsp;&nbsp;Mã_Tài_Khoản</span><br> gửi đến <span class="sms_n">8785</span></td>
+			<td>15 000 đ/sms</td>
+			<td>
+			Dùng để mua thêm 01 lượt đăng tin cho tài khoản tương ứng với Mã_Tài_Khoản nhắn tin. Tin đăng mua qua SMS này có thời gian hiệu lực trong vòng <strong>10 ngày</strong> kể từ ngày đăng chính thức lên Bonbanh.com.Tại một thời điểm mọi thành viên chỉ được đăng tối đa <b>3</b> tin bán xe mua qua SMS<br>
+			
+			Ví dụ: Mã tài khoản của bạn là <b>54321</b> thì cú pháp nhắn tin:<br><span class="sms_vd">BONBANH &nbsp;TX &nbsp;54321</span> gửi đến <span class="sms_n">8785</span>
+			</td>
+		
+		</tr>	
+<tr>
+			<td class="pkg_title">Gia hạn cho tin bán xe được mua qua SMS</td>
+			<td><span class="sms_cp">BONBANH &nbsp;GH &nbsp;Mã_Tin</span><br> gửi đến <span class="sms_n">8785</span></td>
+			<td>15 000 đ/sms</td>
+			<td>
+			Dùng để gia hạn thêm <strong>20 ngày</strong> cho tin bán xe đã đăng được mua qua SMS.<br>
+			Ví dụ: Mã tin của bạn là <b>123456</b> thì cú pháp nhắn tin:<br><span class="sms_vd">BONBANH &nbsp;GH &nbsp;123456</span> gửi đến <span class="sms_n">8785</span>
+			<br>
+			<font color=red>Chú ý: Chỉ thực hiện được gia hạn tin bán xe cho tin bán xe mua qua SMS còn hạn hoặc hết hạn không quá 30 ngày !</font>
+			</td>
+		
+		</tr>			
+		<tr>
+			<td class="pkg_title">Xóa tin đã đăng</td>
+			<td><span class="sms_cp">BONBANH &nbsp;XOA &nbsp;Mã_Tin</span><br> gửi đến <span class="sms_n">8285</span></td>
+			<td>2 000 đ/sms</td>
+			<td>
+			Dùng để xóa tin bán xe( chuyển tin sang trạng thái đã bán).<br> <font color=red>Chú ý: Số máy DĐ nhắn tin bắt buộc phải là số máy của tài khoản đăng tin</font>.<br>
+			Ví dụ: Mã tin của bạn là <b>123456</b> thì cú pháp nhắn tin:<br><span class="sms_vd">BONBANH XOA 123456</span> gửi đến <span class="sms_n">8285</span>  
+			</td>
+		
+		</tr>
+		<tr>
+			<td class="pkg_title">Quên mật khẩu, tên truy cập</td>
+			<td><span class="sms_cp">BONBANH &nbsp;MK</span><br> gửi đến <span class="sms_n">8285</span></td>
+			<td>2 000 đ/sms</td>
+			<td >
+			Dùng để lấy mất khẩu,tên truy cập của tài khoản trong trường hợp quên mật khẩu,tên truy cập ( mật khẩu và tên truy cập sẽ được gửi vào số điện thoại tương ứng với tài khoản nhắn tin).<br><font color=red>Chú ý: Số máy DĐ nhắn tin bắt buộc phải là số máy của tài khoản yêu cầu lấy mất khẩu. Tên truy cập và Mật khẩu sẽ được gửi vào số DĐ này.Thành viên VIP3 không sử dụng được chức năng này</font>.<br>
+			Ví dụ: Tài khoản của bạn sử dụng số đi động :09xxxxxxxx thì bạn phải dùng đúng số di động này và nhắn tin theo cú pháp:<br><span class="sms_vd">BONBANH &nbsp;MK</span> gửi đến <span class="sms_n">8285</span>
+			</td>
+			
+		</tr>
+	
+	</table>
+	</div>
+	<div style="padding:0px 5px 5px 10px;font-size:13px;line-height:18px;font-size:14px">
+		<span style="font-weight:bold;font-style:italic;color:red">Ghi chú:</span><br>
+		- Mã_Tin : <i>Mã của tin bán xe.</i> <br>
+		- Mã_Tài_Khoản :<i> Mã tài khoản tương ứng của bạn</i>.<br>
+		
+		
+	</div>
+	<div style="color:red;line-height:16px;padding:5px;">
+	<b>Chú ý:</b>  <br>
+	- Nếu bạn nhắn tin sai cú pháp hoặc gửi nhầm đầu số thì tài khoản điện thoại của bạn vẫn bị trừ tiền và Bonbanh sẽ không chịu trách nhiệm vấn đề này!<br>
+	- Quy định chống spam tin nhắn (từ các nhà mạng):
+		<div style="padding:20px;color:#DE0029;line-height:16px;">
+		1. Quy định của mạng Viettel (098,097,0168...)<br>
+	Không được gửi quá 3 tin nhắn Up tin có cùng nội dung từ một số điện thoại trong thời gian 5 phút.<br>
+	Không được gửi quá 10 tin nhắn Up tin có cùng nội dung từ một số điện thoại trong thời gian 1 giờ.<br>
+	Không được gửi quá 100 tin nhắn Up tin trong vòng 24 giờ.<br>
+
+	Không được gửi quá 3 tin nhắn Đăng thêm xe/Gia hạn tin từ một số điện thoại trong thời gian 30 phút.<br>
+	Không được gửi quá 10 tin nhắn Đăng thêm xe/Gia hạn từ một số điện thoại trong thời gian 24 giờ.<br><br>
+
+	2. Quy định của mạng VinaPhone (091,094,0123...)<br>
+	Không được gửi quá 3 tin nhắn có cùng nội dung với một số điện thoại trong thời gian 5 phút.<br>
+	Không được gửi quá 5 tin nhắn có cùng nội dung với một số điện thoại trong thời gian 10 phút.<br>
+	Không được gửi quá 30 tin nhắn có cùng nội dung với một số điện thoại trong thời gian 1 giờ.<br>
+	Không được gửi quá 300 tin nhắn trong vòng 24 giờ.<br><br>
+
+	3. Quy định của mạng Mobifone (090,093,0122...)<br>
+	Không được sử dụng các dịch vụ nhắn tin của Bonbanh quá 150.000 đồng trong 1 ngày ( từ 0h00:00 đến 23h59:59). Lưu ý thêm : đối với các SIM khuyến mại trả trước đã được cộng tiền vào tài khoản, người dùng không thể sử dụng dịch vụ SMS của Bonbanh do hạn chế từ phía Mobifone.
+		</div>
+	</div>
+	
+</div>
+<div id="footer">
+	<div class="l-footer"></div>
+	<div class="c-footer">
+		<div class="f-menu">
+			<a href="../index.html" class="f-link" title="oto, mua ban oto">Trang chủ</a> <span>|</span>
+			<a href="../quy-che-hoat-dong/index.html#dangtin" class="f-link">Quy định đăng tin</a> <span>|</span>
+			<a href="../quy-che-hoat-dong/index.html" class="f-link">Quy chế hoạt động</a> <span>|</span>
+			<a href="index.html" class="f-link">Dịch vụ tiện ích SMS</a> <span>|</span>
+			<a href="../gioi-thieu/index.html" class="f-link">Trợ giúp</a> <span>|</span>
+			<a href="../lien-he/index.html" class="f-link">Liên hệ</a> 
+		</div>
+		<div class="f-copyright">
+		<div style="float: left; width: 845px;">
+		Xem tốt nhất trên trình duyệt <a rel="nofollow"  class="f-copyright" target="_blank" href="http://www.mozilla.com/vi/" title="Tải Mozilla FireFox phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Mozilla FireFox</b></a> , <a rel="nofollow"  class="f-copyright"  target="_blank" href="http://www.google.com/chrome?hl=vi" title="Tải Google Chrome phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Google Chrome</b></a> hoặc <b>IE 7</b> trở lên với độ phân giải từ 1024x768 trở lên.<br>
+		Điện thoại: 04-2215 2215 / 04-2215 2246 . Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script>. <span style="">Hotline: <script>document.write("094"+" 2727"+" 225");</script></span><br>
+		<span style="color:red">Bonbanh không bán xe trực tiếp, quý khách mua xe vui lòng liên hệ trực tiếp người đăng tin.<br></span>
+		Copyright © 2006-2015 <a href="../index.html" title="oto, mua ban oto, oto nhap khau">Bonbanh.com</a> - <b style="font-weigth:bold">Công ty cổ phần Kypernet Việt Nam.</b> Mã số doanh nghiệp: 0101833960
+		</div>
+		<div style="float: right; width: 102px;margin-top:3px">
+		<a rel="nofollow"  href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=8610" target="_blank"><img src="../img/bct.gif" title="Bonbanh.com đã đăng ký với Bộ Công Thương" alt=""></a>
+		</div>
+		
+		
+		</div>
+		
+	</div>
+	<div class="r-footer"></div>
+</div>
+<div id="cookie_content" style="display:none">
+<div style="margin-bottom:3px;background:#FFFFE5;border: 1px solid #FFB64B;padding:5px 20px 5px 20px;">
+<div style="color:red">
+<img src='../img/reg_i.gif'> <b>Thông báo:</b> Trình duyệt của bạn không hỗ trợ <b>Cookie</b> hoặc đang tắt <b>Cookie</b>. Để chạy được các chức năng trên bonbanh.com trình duyệt của bạn cần phải bật <b>Cookie</b> !
+</div>
+<div style="text-align:center;color:#666;padding-top:5px;">
+Nếu trình duyệt của bạn tắt cookie bạn có thể bật lại cookie theo hướng dẫn sau đây : <a href="../bat-cookie/index.html">Bật Cookie trình duyệt</a>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="../js/ck.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1138176-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="abblock">
+    
+<!-- Begin Adbrand -->
+<script language="javascript" type="text/javascript">
+    var adbrand_zoneId = 'va_69E92C1B41314EB7';
+    var adbrand_width  = '250';
+    var adbrand_height = '250';
+    var adbrand_sizeId = '12';
+    var adbrand_typeId = '2'; 
+</script>
+<script type="text/javascript" src="../../embed.adbrand.net/adbrand.js"></script>
+<!-- End: Adbrand -->
+
+
+</div>
+
+</div>
+</body>
+
+<!-- Mirrored from www.bonbanh.com/sms/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 01:37:30 GMT -->
+</html><!--t : tdb:0.00041317939758301/t3:0.00027894973754883/t4:0.00069713592529297/0.0015981197357178  -->

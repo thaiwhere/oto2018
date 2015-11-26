@@ -1,0 +1,774 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+
+<!-- Mirrored from www.bonbanh.com/thanh-vien/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 00:21:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Thành viên của Bonbanh.com</title>
+<base />
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="../img/favico.ico"  type="image/x-icon"/>
+
+<link href="../css/register.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/jquery-1.3.2.js" ></script>
+<script language="javascript" src="../js/lib.js"></script>
+<script language="JavaScript" src="../js/vietuni.js" type="text/javascript"></script>
+</head>
+<body >
+<div id="wrapper">
+<div id="header">
+<style>
+
+
+
+</style>
+<a id="logo"  href="../index.html" title="oto, mua ban oto"  ><h1>oto, mua ban oto</h1>
+</a>
+
+
+<div id="top-nav" style="*width:325px">
+	<ul>		
+		<li><a href="../dang-ky-thanh-vien/index.html">Đăng ký</a></li>
+		<li><a href="index.html" onclick="open_dialog('login-dlg','username1');return false;">Đăng nhập</a></li>
+		<li><a href="../gioi-thieu/index.html">Hướng dẫn</a></li>		
+		<li class="ilast"><a href="../lien-he/index.html">Liên hệ</a></li>
+</ul>		
+	<img src="../img/pixel.gif" class="img-top-nav-right"/>
+	
+</div>		
+
+
+
+<div id="nav-bar">
+	<a class="menu-item" href="../index.html" title="oto, mua ban oto">Trang chủ</a>
+	<a class="menu-item" href="../oto/index.html" title="Tìm mua ô tô">Tìm mua ô tô</a>
+	<a class="menu-item" href="../salon-oto/index.html">Salon Ôtô</a>
+	<a class="menu-item" href="../dang-tin-ban-xe/index.html" title="Bán ô tô">Bán ô tô</a>
+	<a class="menu-item" href="../tin-mua-xe/index.html" title="Các tin mua xe">Cần mua ?</a>
+		
+	<a class="menu-item" href="../my-bonbanh/index.html" title="Quản lý tin đăng của bạn...">My BonBanh</a>
+		</div>
+</div>
+<div id="cookie_alert" ></div>
+<div id="alert_content" ></div>
+	<!-- begin login diaglog-->
+		<div  id="login-dlg" style="display:none" class="dlg-box">
+		<div class="shadow">
+		<span class="close-btn"><a href="#" onclick="return close_dialog('login-dlg');">x</a></span>
+		<div id="login-frm">
+		<form  action="#" method="post">
+			<span class="input-label">Tên truy cập</span><span class="input-text"><input name="username1" id="username1" type="text" ></span>
+			<span class="input-label">Mật khẩu</span><span class="input-text"><input type="password" id="pass1" name="pass1"></span>
+			<div class="input-btn">
+			<input type="submit" name="login_btn" value="Đăng nhập" class="login_btn" onclick="return login_submit1();"/>
+			<a href="../quen-mat-khau/index.html">Quên mật khẩu ?</a>
+			</div>
+			<div style="float: left;width:260px;padding-left:20px;color:#666">Tên truy cập có thể là: tên truy cập/email/mobile tương ứng với tài khoản của bạn</div>
+			<div id="login_processing" ><img src="../img/processing.gif"></div>
+			
+		</form>
+		</div>
+		</div>
+		</div>
+	<!-- end login diaglog-->
+	
+<script>
+
+function login_submit1()
+{
+	$("#login_processing").show();
+	//$("#login_msg").hide();
+	var ct = new Date();
+	strURL='process_login/?T='+ct.getTime();
+	$.post(strURL, {username: $("#username1").val(),pass: $("#pass1").val()}, function(data){
+				if(data.length >0) {
+					
+					if(data=="OK")
+					{						
+						location.reload(true);
+
+					}else if(data=="OK1")
+					{
+						window.location="../my-bonbanh/index.html";
+					}else if(data=="NotExist")
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: Tên truy cập không có trong hệ thống!");
+					}else
+					{
+						$("#login_processing").hide();
+						alert("Lỗi đăng nhập: mật khẩu không đúng hãy thử lại!");
+					}
+					
+				}else
+				{
+					$("#login_processing").hide();
+					alert("Lỗi đăng nhập: tên truy câp/mật khẩu không đúng hãy thử lại!");
+				}
+			});
+	return false;
+}
+
+</script><div class="breadcrum"><a href="#">Trang chủ</a> &raquo; Thành viên</div>
+<div class="member-login">
+	<div class="member_line">
+	<h2>Đăng nhập hệ thống</h2>
+	
+	</div>
+<form name="frmLogin" id="frmLogin" action="#" method="post">
+	<input type="hidden" name="urlfwd" id="urlfwd" value="">
+    <div class="bbforminput" id="username_parent">
+            <div class="Account1">
+                <label for="username">
+                    <span class="cRed f11" title="required">*</span>&nbsp;
+                    Tên truy cập:</label></div>
+            <div class="bbformfield" id="aaa">
+                <span class="inp">
+                    <input class="widthIn" id="username"  value="" name="username" size="14" maxlength="20"></span></div>
+            <div class="clear">
+            </div>
+            <div class="bbMsg bbMsgErr" id="username_error" style="display: none; left: 338.5px; top: 308.5px;">
+                &nbsp;</div>
+        </div>
+        <div class="bbforminput" id="pass_parent">
+            <div class="Account1">
+                <label for="pass">
+                    <span class="cRed f11" title="required">*</span>&nbsp;
+                    Mật khẩu:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <input class="widthIn" name="pass" id="pass" size="14" maxlength="20" type="password"></span></div>
+            <div class="clear">
+            </div>
+            <div class="bbMsg bbMsgErr" id="pass_error" style="display: none; left: 438.5px; top: 239.5px;">
+                <p>
+                    &nbsp;</p>
+            </div>
+        </div>
+		
+		<div style="text-align:center;padding:20px	0 20px 0">
+		 <input name="Login_Submit" id="Login_Submit"  src="../img/login.jpg" onclick="return login_submit2();" style="border-width: 0px;" type="image"> <span style="position:relative;left:20px;top:-10px;"><a  href="../quen-mat-khau/index.html">Quên mật khẩu ?</a></span>
+		</div>
+		<div id="processing">Kiểm tra đăng nhập...</div>
+		<div id="login_msg">Lỗi đăng nhập !</div>
+		<div style="clear:both;"></div>
+		<div class="member_line">
+	<h2>Lợi ích khi là thành viên của bonbanh.com</h2>
+	
+	</div>
+	<div style="clear:both;"></div>
+	<ul id="mem_benefit">
+		<li>Đăng tin mua/ bán xe miễn phí</li>
+		<li>Trao đổi thông tin với các thành viên khác</li>
+		<li>Sử dụng rất nhiều tiện ích của bonbanh.com</li>
+	</ul>
+</form>		 
+</div>
+<div class="register1">
+
+
+<div class="reg_line1">
+<h2>Đăng ký thành viên</h2>
+<span title="required" class="cRed">*</span> Bắt buộc nhập
+
+</div>
+    
+
+ <form name="form2" method="post" id="form2" action="http://www.bonbanh.com/gui-dang-ky/">
+
+<script type="text/javascript">
+
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+var RS_JS_Confirm_Error = "Xác nhận mật khẩu không đúng.";
+var RS_JS_Confirm_Notice = "<p>- Nhập lại mật khẩu</p>";
+var RS_JS_Confirm_Reuqire = "Phải nhập xác nhận mật khẩu";
+var RS_JS_Email_Exist = "Email này đã được sử dụng, hãy sử dụng email khác.";
+var RS_JS_Phone_Exist = "Số ĐT này đã được sử dụng, hãy sử dụng số khác";
+var RS_JS_FullName_Reuqirment = "Phải nhập họ tên";
+var RS_JS_Address_Reuqirment = "Phải nhập địa chỉ";
+var RS_JS_Mobile_Reuqirment = "Phải nhập số mobile của bạn";
+var RS_JS_FullName_Notice = "<p>- Hãy nhập họ tên của bạn.<br>- Lưu ý : bạn nên nhập tiếng Việt có dấu</p>";
+var RS_JS_Mail_Notice = "<p>- Hãy nhập email của bạn<br>- Email này sẽ được dùng để nhận các tin nhắn từ bonbanh.com.<br>- Email còn dùng để khôi phục lại mật khẩu khi bạn quên.<br>- Hãy <b>chắc chắn rằng email này là đúng</b> và bạn đang dùng.<br>- Một email chỉ được dùng cho 1 tài khoản</p>";
+var RS_JS_Address_Notice = "<p>- Hãy nhập địa chỉ của bạn<br>- <font color=red>Chú ý :</font>Không cần nhập tỉnh thành ở đây</p>";
+var RS_JS_Mobile_Notice = "<p>- Hãy nhập số mobile của bạn.<br>- Số ĐT này sẽ được dùng trong thông tin liên hệ của bạn( nếu bạn đăng tin).<br>- Bạn nên nhập chính xác số ĐT của mình để người khác có thể liên lạc được với bạn</p>";
+var RS_JS_OtherPhone_Notice="<p>- Nếu bạn có số điện thoại khác (di động hoặc cố định) thì hãy nhập vào đây.<br>-  Nếu là số cố định thì phải nhập thêm mã vùng.VD Hà nội: 04,TPHCM: 08</p>";
+var RS_Js_SECURE_CODE_Notice="<p>-Hãy nhập mã số bảo vệ giống với nội dung hình bên cạnh</p>";
+
+var RS_JS_Mail_Requirment = "Phải nhập email.";
+var RS_Js_Mail_Valid = "Phải nhập email hợp lệ.";
+var RS_JS_Member_MaxLength = "Tên truy cập phải từ 6-20 ký tự.";
+var RS_JS_Member_MinLength = "Tên truy cập phải từ 6-20 ký tự.";
+
+var RS_JS_FullName_MaxLength = "Tên đầy đủ phải từ 5-50 ký tự.";
+var RS_JS_FullName_MinLength = "Tên đầy đủ phải từ 5-50 ký tự.";
+
+var RS_JS_Mobile_MaxLength = "Số di động phải từ 10-12 số.";
+var RS_JS_OtherPhone_MinMaxLength="Số điện thoại khác phải từ 9-12 số";
+var RS_JS_OtherPhone_Invalid="Số điện thoại không hợp lệ";
+
+var RS_JS_MemberID_Exist = "Tên truy cập này đã được sử dụng hãy sử dụng tên truy cập khác.";
+var RS_JS_MemberID_Notic = "<p>Tên truy cập phải từ 6-20 ký tự (A-Z,a-z,0-9,-,_,không dấu cách). </p>";
+var RS_JS_MemberID_Reuqirment = "Phải nhập tên truy cập.";
+var RS_JS_Normal_Error = "A-Z, a-z, 0-9, -, _, không dấu cách";
+var RS_JS_NotChineseCode = "Không nhập ký tự đặc biệt hay ký tự không phải là ký tự la tinh.";
+var RS_JS_Password_DontEqualID = "Không sử dụng tên truy cập làm mật khẩu";
+var RS_JS_Password_MinOrMaxLength = "Mật khẩu phải từ 6-20 ký tự.";
+var RS_JS_Password_Notic = "<p>Mật khẩu phải từ 6-20 ký tự (A-Z, a-z, 0-9,không dấu cách).<br />- Tránh sử dụng tên truy cập làm mật khẩu</p>";
+var RS_JS_Password_Reuqirment = "Phải nhập mật khẩu";
+var RS_Js_VCODE_Requirment = "Please enter the Verification Code";
+var RS_Js_SECURE_CODE_Requirment="Phải nhập mã số bảo vệ";
+var RS_JS_Adress_MinLength = "Địa chỉ phải nhập từ 6 ký tự trở lên.";
+var RS_JS_NUMBER_ONLY	= "Chỉ được nhập số";
+
+var RS_JS_MOBILE_INVALID ="Số di động ko hợp lệ";
+//]]>
+</script>
+
+<script src="../js/ScriptResource.js" type="text/javascript"></script>
+
+
+   
+
+    <div id="regPage" style="margin-left:20px;">
+
+    <div class="unikeyboard">
+							<span class="label">Bộ gõ Tiếng Việt</span>
+							<span><input style="width:80; border:0px;" onfocus="setTypingMode(0)" name="switcher" value="OFF" type="radio">Off </input></span>
+							<span><input style="width:30; border:0px;" onfocus="setTypingMode(1)" checked="checked" name="switcher" value="TELEX" type="radio">Telex </input></span>
+							<span><input style="width:30; border:0px;" onfocus="setTypingMode(2)" name="switcher" value="vnVni" type="radio">Vni </input></span>
+							<span><input style="width:30; border:0px;" onfocus="setTypingMode(3)" name="switcher" value="VIQR" type="radio">VIQR	</input></span>
+
+		</div>
+	
+    
+<fieldset>
+    <div class="bbforminput" id="countrySelect">
+        <div class="bbselC">
+            <label for="selCountry">
+                </label><h3>
+                    <span class="cRed f11" title="required">*</span>&nbsp;
+                    Chọn khu vực sinh sống:</h3>
+            
+        </div>
+        <div class="bbformfield">
+            <!-- cache 2--><!--timcity=6.5088272094727E-5--><script>
+
+function select_city()
+
+{
+	$("#address_city").html("");
+	if($("#city").val()!='')
+	{
+		$("#address_city").html($("#city option:selected").text());
+		
+	}
+}
+
+</script>
+	<select style="background-color: rgb(255, 255, 160);" name="city" id="city" size="0" onchange="select_city();" >
+		<option selected="selected" value="">--Chọn khu vực sinh sống--</option>
+		<optgroup label="Miền Bắc">
+							
+					<option value="22" >&nbsp;&nbsp;Hà Nội</option>				
+							
+					<option value="25" >&nbsp;&nbsp;Bắc Giang</option>				
+							
+					<option value="24" >&nbsp;&nbsp;Bắc Kạn</option>				
+							
+					<option value="26" >&nbsp;&nbsp;Bắc Ninh</option>				
+							
+					<option value="27" >&nbsp;&nbsp;Cao Bằng</option>				
+							
+					<option value="48" >&nbsp;&nbsp;Điện Biên</option>				
+							
+					<option value="31" >&nbsp;&nbsp;Hải Dương</option>				
+							
+					<option value="23" >&nbsp;&nbsp;Hải Phòng</option>				
+							
+					<option value="28" >&nbsp;&nbsp;Hà Giang</option>				
+							
+					<option value="29" >&nbsp;&nbsp;Hà Nam</option>				
+							
+					<option value="32" >&nbsp;&nbsp;Hòa Bình</option>				
+							
+					<option value="33" >&nbsp;&nbsp;Hưng Yên</option>				
+							
+					<option value="34" >&nbsp;&nbsp;Lai Châu</option>				
+							
+					<option value="35" >&nbsp;&nbsp;Lạng Sơn</option>				
+							
+					<option value="36" >&nbsp;&nbsp;Lào Cai</option>				
+							
+					<option value="37" >&nbsp;&nbsp;Nam Định</option>				
+							
+					<option value="38" >&nbsp;&nbsp;Ninh Bình</option>				
+							
+					<option value="39" >&nbsp;&nbsp;Phú Thọ</option>				
+							
+					<option value="40" >&nbsp;&nbsp;Quảng Ninh</option>				
+							
+					<option value="41" >&nbsp;&nbsp;Sơn La</option>				
+							
+					<option value="42" >&nbsp;&nbsp;Thái Bình</option>				
+							
+					<option value="43" >&nbsp;&nbsp;Thái Nguyên</option>				
+							
+					<option value="44" >&nbsp;&nbsp;Thanh Hóa</option>				
+							
+					<option value="45" >&nbsp;&nbsp;Tuyên Quang</option>				
+							
+					<option value="46" >&nbsp;&nbsp;Vĩnh Phúc</option>				
+							
+					<option value="47" >&nbsp;&nbsp;Yên Bái</option>				
+					</optgroup>
+		<optgroup label="Miền Trung">
+							
+					<option value="49" >&nbsp;&nbsp;Đà  Nẵng</option>				
+							
+					<option value="51" >&nbsp;&nbsp;Bình Định</option>				
+							
+					<option value="50" >&nbsp;&nbsp;Bình Phước</option>				
+							
+					<option value="52" >&nbsp;&nbsp;Bình Thuận</option>				
+							
+					<option value="66" >&nbsp;&nbsp;Đăk Lăk</option>				
+							
+					<option value="67" >&nbsp;&nbsp;Đăk Nông</option>				
+							
+					<option value="53" >&nbsp;&nbsp;Gia  Lai</option>				
+							
+					<option value="54" >&nbsp;&nbsp;Hà  Tĩnh</option>				
+							
+					<option value="55" >&nbsp;&nbsp;Khánh Hòa</option>				
+							
+					<option value="56" >&nbsp;&nbsp;Kon Tum</option>				
+							
+					<option value="57" >&nbsp;&nbsp;Lâm Đồng</option>				
+							
+					<option value="58" >&nbsp;&nbsp;Nghệ An</option>				
+							
+					<option value="59" >&nbsp;&nbsp;Ninh Thuận</option>				
+							
+					<option value="60" >&nbsp;&nbsp;Phú Yên</option>				
+							
+					<option value="61" >&nbsp;&nbsp;Quảng Bình</option>				
+							
+					<option value="62" >&nbsp;&nbsp;Quảng Nam</option>				
+							
+					<option value="63" >&nbsp;&nbsp;Quảng Ngãi</option>				
+							
+					<option value="64" >&nbsp;&nbsp;Quảng Trị</option>				
+							
+					<option value="65" >&nbsp;&nbsp;Thừa Thiên Huế</option>				
+					</optgroup>
+		<optgroup label="Miền Nam">
+							
+					<option value="68" >&nbsp;&nbsp;TP HCM</option>				
+							
+					<option value="69" >&nbsp;&nbsp;An Giang</option>				
+							
+					<option value="71" >&nbsp;&nbsp;Bạc Liêu</option>				
+							
+					<option value="70" >&nbsp;&nbsp;Bà Rịa- Vũng Tàu</option>				
+							
+					<option value="72" >&nbsp;&nbsp;Bến Tre</option>				
+							
+					<option value="73" >&nbsp;&nbsp;Bình Dương</option>				
+							
+					<option value="75" >&nbsp;&nbsp;Cần Thơ</option>				
+							
+					<option value="74" >&nbsp;&nbsp;Cà Mau</option>				
+							
+					<option value="84" >&nbsp;&nbsp;Đồng Nai</option>				
+							
+					<option value="85" >&nbsp;&nbsp;Đồng Tháp</option>				
+							
+					<option value="76" >&nbsp;&nbsp;Hậu Giang</option>				
+							
+					<option value="77" >&nbsp;&nbsp;Kiên Giang</option>				
+							
+					<option value="78" >&nbsp;&nbsp;Long An</option>				
+							
+					<option value="80" >&nbsp;&nbsp;Sóc Trăng</option>				
+							
+					<option value="79" >&nbsp;&nbsp;Tây Ninh</option>				
+							
+					<option value="81" >&nbsp;&nbsp;Tiền Giang</option>				
+							
+					<option value="82" >&nbsp;&nbsp;Trà Vinh</option>				
+							
+					<option value="83" >&nbsp;&nbsp;Vĩnh Long</option>				
+					</optgroup>
+	</select>		
+			<script>						
+		$('#city').attr("value",'');
+		</script> 
+        </div>
+    </div>
+</fieldset>
+
+<div class="" id="regAccount" onkeypress="if(event.keyCode==13&amp;&amp;!IsResize)$get('UC_Register_StepOne1_btn_Submit').click();" style="overflow: hidden;">
+    <h3>
+        <span id="UC_Register_StepOne1_RS_span_title"></span>
+    </h3>
+    <fieldset>
+
+        <div class="bbforminput" id="memberid_parent">
+            <div class="Account">
+                <label for="memberid">
+                    <span class="cRed f11" title="required">*</span>&nbsp;
+                    Tên truy cập:</label></div>
+            <div class="bbformfield" id="aaa">
+                <span class="inp">
+                    <input class="widthIn" id="memberid" onkeypress="MemberValid=-1" value="" name="memberid" size="18" maxlength="20"></span></div>
+            <div class="clear">
+            </div>
+            <div class="bbMsg bbMsgErr" id="memberid_error" style="display: none;width:200px; left: 338.5px; top: 308.5px;">
+                &nbsp;</div>
+        </div>
+        <div class="bbforminput" id="password_parent">
+            <div class="Account">
+                <label for="password">
+                    <span class="cRed f11" title="required">*</span>&nbsp;
+                    Mật khẩu:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <input class="widthIn" name="password" id="password" size="18" maxlength="20" type="password"></span></div>
+            <div class="clear">
+            </div>
+            <div class="bbMsg bbMsgErr" id="password_error" style="display: none; left: 438.5px; top: 239.5px;">
+                <p>
+                    &nbsp;</p>
+            </div>
+        </div>
+        <div class="bbforminput" id="confirm_parent">
+            <div class="Account">
+                <label for="confirm">
+                    <span class="cRed f11" title="required">*</span>&nbsp;
+                    Xác nhận mật khẩu:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <input class="widthIn" id="confirm" name="confirm" size="18" maxlength="20" type="password"></span></div>
+            <div class="clear">
+            </div>
+            <div class="bbMsg bbMsgErr" id="confirm_error" style="display: none; left: 438.5px; top: 370.5px;">
+                <p>
+                    &nbsp;</p>
+            </div>
+        </div>
+       <div class="bbforminput" id="fullname_parent">
+            <div class="Account">
+                <label for="fullname">
+                    <span class="cRed f11" title="required">*</span>&nbsp;
+                    Tên đầy đủ:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <div class="left">
+                         <label for="fullname">
+                               
+                        <input onkeyup="telexingVietUC(this,event)" style="background-color: rgb(255, 255, 160);" class="widthI8" id="fullname" name="fullname" value="" size="18" maxlength="50"></div>
+                    <div class="left padL">
+                       </div>
+                </span>
+            </div>
+  
+            <div class="clear">
+            </div>
+            <div class="bbMsg bbMsgErr" id="fullname_error" style="display: none; left: 338.5px; top: 414.5px;">
+                <p>
+                    &nbsp;</p>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        
+
+        <div id="mail_parent" class="bbforminput">
+            <div class="Account">
+                <label for="mail">
+                    <span title="required" class="cRed f11">*</span> 
+                    Email:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <input maxlength="50" size="18" onkeypress="EmailValid=-1" value="" name="mail" id="mail" class="widthIn" style="background-color: rgb(255, 255, 160);"/>
+                </span>
+            </div>
+            <div class="clear">
+            </div>
+            <div style="display: none; left: 638.5px; top: 431.8px;" id="mail_error" class="bbMsg bbMsgErr">
+                <p>
+                     </p>
+            </div>
+        </div>
+		<div id="mobile_parent" class="bbforminput">
+            <div class="Account">
+                <label for="mobile">
+                    <span title="required" class="cRed f11">*</span> 
+                    Mobile:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <input maxlength="11" size="18"  value="" name="mobile" id="mobile" class="widthIn" style="width:100px;"/>
+                </span>
+            </div>
+            <div class="clear">
+            </div>
+            <div style="display: none; left: 638.5px; top: 431.8px;" id="mobile_error" class="bbMsg bbMsgErr">
+                <p>
+                     </p>
+            </div>
+        </div>
+		<div id="otherphone_parent" class="bbforminput">
+            <div class="Account">
+                <label for="otherphone">
+                    
+                    Số ĐT khác:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <input maxlength="11" size="18"  value="" name="otherphone" id="otherphone" class="widthIn" style="width:100px;"/>
+                </span>
+            </div>
+            <div class="clear">
+            </div>
+            <div style="display: none; left: 638.5px; top: 431.8px;" id="otherphone_error" class="bbMsg bbMsgErr">
+                <p>
+                     </p>
+            </div>
+        </div>
+		<div id="address_parent" class="bbforminput">
+            <div class="Account">
+                <label for="address">
+                    <span title="required" class="cRed f11">*</span> 
+                    Địa chỉ:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <input onkeyup="telexingVietUC(this,event)" maxlength="50" size="18"  value="" name="address" id="address" class="widthIn" style="width:250px;"/> <span id=address_city></span>
+                </span>
+            </div>
+            <div class="clear">
+            </div>
+            <div style="display: none; left: 638.5px; top: 431.8px;" id="address_error" class="bbMsg bbMsgErr">
+                <p>
+                     </p>
+            </div>
+        </div>
+		<div id="secure_code_parent" class="bbforminput">
+            <div class="Account">
+                <label for="secure_code">
+                    
+                    Mã số bảo vệ:</label></div>
+            <div class="bbformfield">
+                <span class="inp">
+                    <input maxlength="5" size="8"  value="" name="secure_code" id="secure_code" class="widthIn" style="width:100px;"/><img src="../image20a8.gif?type=register" border=0 id="image_code" style="position:relative;top:10px;left:5px">
+                </span>
+            </div>
+            <div class="clear">
+            </div>
+            <div style="display: none; left: 638.5px; top: 431.8px;" id="secure_code_error" class="bbMsg bbMsgErr">
+                <p>
+                     </p>
+            </div>
+        </div>
+        
+    </fieldset>
+</div>
+<div id="regAccount2">
+</div>
+<div id="regTerms">
+    <p>
+        <label for="term">
+            <input id="term" value="" checked="checked" type="checkbox">
+            Tôi đồng ý với  <a target="_blank" title="Term of Use" href="../quy-dinh/index.html">điều khoản</a> và <a target="_blank" title="Privacy statement" href="../quy-dinh/index.html">Các quy định</a>; của  Bonbanh.com.
+        </label>
+    </p>
+    <input name="UC_Register_StepOne1$btn_Submit" id="UC_Register_StepOne1_btn_Submit"  src="../img/register.jpg" onclick="return SubOne_Submit();" style="border-width: 0px;" type="image">
+</div>
+<div class="bbMsg" id="linlin" style="display: none; left: 438.5px; top: 370.5px;width:220px"><p>- Nhập lại mật khẩu</p></div>
+<br>
+<script type="text/javascript" src="../js/Tooltrip.js"></script>
+
+<script type="text/javascript" src="../js/join1.js"></script>
+
+
+
+<script type="text/javascript">
+
+function ChangPic(img)
+{
+    img.src= img.src+"?a";
+}
+function login_submit2()
+{
+	$("#processing").show();
+	$("#login_msg").hide();
+	var ct = new Date();
+	strURL='process_login/?T='+ct.getTime();
+	$.post(strURL, {username: $("#username").val(),pass: $("#pass").val()}, function(data){
+				if(data.length >0) {
+					//alert(data);
+					if(data.trim()=="OK" || data.trim()=="OK1")
+					{
+						window.location="../my-bonbanh/index.html";
+					}else if(data.trim()=="NotExist")
+					{						
+						$("#processing").hide();						
+						$("#login_msg").show();
+						$("#login_msg").html("Tên truy cập không tồn tại !");
+					}
+					else
+					{
+						$("#processing").hide();						
+						$("#login_msg").show();
+						$("#login_msg").html("Lỗi đăng nhập tên truy cập/mật khẩu không đúng !");
+					}
+					
+				}else
+				{
+					$("#processing").hide();
+					$("#login_msg").show();
+				}
+			});
+	return false;
+}
+function SubOne_Submit()
+{
+    var itemObj = null;
+    var isError = true;
+ 
+    if($get("city").selectedIndex == 0||($get("city").value+"").trim()=="-1")
+    {
+        
+        window.alert("Hãy lựa chọn nơi bạn sinh sống.");
+        return false;
+    }
+    
+    if(Tooltip&&Tooltip.ToolList)
+    {
+        for(var item in Tooltip.ToolList)
+        {
+            itemObj = Tooltip.ToolList[item]
+            itemObj.Valid("OnSub");
+            if(itemObj.State == ErrorState.Error)
+            {
+                isError = false;
+            }
+             
+        }
+    }
+   
+    return isError;
+}
+
+</script>   
+ 
+    </div>    
+
+</form>
+
+
+
+	
+
+	
+</div>
+
+<div id="footer">
+	<div class="l-footer"></div>
+	<div class="c-footer">
+		<div class="f-menu">
+			<a href="../index.html" class="f-link" title="oto, mua ban oto">Trang chủ</a> <span>|</span>
+			<a href="../quy-che-hoat-dong/index.html#dangtin" class="f-link">Quy định đăng tin</a> <span>|</span>
+			<a href="../quy-che-hoat-dong/index.html" class="f-link">Quy chế hoạt động</a> <span>|</span>
+			<a href="../sms/index.html" class="f-link">Dịch vụ tiện ích SMS</a> <span>|</span>
+			<a href="../gioi-thieu/index.html" class="f-link">Trợ giúp</a> <span>|</span>
+			<a href="../lien-he/index.html" class="f-link">Liên hệ</a> 
+		</div>
+		<div class="f-copyright">
+		<div style="float: left; width: 845px;">
+		Xem tốt nhất trên trình duyệt <a rel="nofollow"  class="f-copyright" target="_blank" href="http://www.mozilla.com/vi/" title="Tải Mozilla FireFox phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Mozilla FireFox</b></a> , <a rel="nofollow"  class="f-copyright"  target="_blank" href="http://www.google.com/chrome?hl=vi" title="Tải Google Chrome phiên bản Tiếng Việt về máy tính(miễn phí)"><b>Google Chrome</b></a> hoặc <b>IE 7</b> trở lên với độ phân giải từ 1024x768 trở lên.<br>
+		Điện thoại: 04-2215 2215 / 04-2215 2246 . Email: <script>document.write("con"+"tact@"+"bon"+"banh.com");</script>. <span style="">Hotline: <script>document.write("094"+" 2727"+" 225");</script></span><br>
+		<span style="color:red">Bonbanh không bán xe trực tiếp, quý khách mua xe vui lòng liên hệ trực tiếp người đăng tin.<br></span>
+		Copyright © 2006-2015 <a href="../index.html" title="oto, mua ban oto, oto nhap khau">Bonbanh.com</a> - <b style="font-weigth:bold">Công ty cổ phần Kypernet Việt Nam.</b> Mã số doanh nghiệp: 0101833960
+		</div>
+		<div style="float: right; width: 102px;margin-top:3px">
+		<a rel="nofollow"  href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=8610" target="_blank"><img src="../img/bct.gif" title="Bonbanh.com đã đăng ký với Bộ Công Thương" alt=""></a>
+		</div>
+		
+		
+		</div>
+		
+	</div>
+	<div class="r-footer"></div>
+</div>
+<div id="cookie_content" style="display:none">
+<div style="margin-bottom:3px;background:#FFFFE5;border: 1px solid #FFB64B;padding:5px 20px 5px 20px;">
+<div style="color:red">
+<img src='../img/reg_i.gif'> <b>Thông báo:</b> Trình duyệt của bạn không hỗ trợ <b>Cookie</b> hoặc đang tắt <b>Cookie</b>. Để chạy được các chức năng trên bonbanh.com trình duyệt của bạn cần phải bật <b>Cookie</b> !
+</div>
+<div style="text-align:center;color:#666;padding-top:5px;">
+Nếu trình duyệt của bạn tắt cookie bạn có thể bật lại cookie theo hướng dẫn sau đây : <a href="../bat-cookie/index.html">Bật Cookie trình duyệt</a>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="../js/ck.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1138176-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="abblock">
+    
+<!-- Begin Adbrand -->
+<script language="javascript" type="text/javascript">
+    var adbrand_zoneId = 'va_69E92C1B41314EB7';
+    var adbrand_width  = '250';
+    var adbrand_height = '250';
+    var adbrand_sizeId = '12';
+    var adbrand_typeId = '2'; 
+</script>
+<script type="text/javascript" src="../../embed.adbrand.net/adbrand.js"></script>
+<!-- End: Adbrand -->
+
+
+</div>
+
+</div>
+</body>
+
+<!-- Mirrored from www.bonbanh.com/thanh-vien/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2015 00:21:21 GMT -->
+</html><!--t : tdb:0.0004119873046875/t3:0.0001990795135498/t4:0.00090479850769043/0.0016789436340332  -->
